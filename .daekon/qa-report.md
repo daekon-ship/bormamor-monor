@@ -119,3 +119,43 @@ Nyitvatartás: kizárólag Péntek 10–18, Szombat 9–14.
 - Élő készüléken való swipe-teszt (touch): a lightbox swipe-handler kód szinten jelen van, valós érintéssel NEM volt tesztelve.
 - Lighthouse: N/A (nincs build-toolchain; súly+CLS kézzel mérve).
 - Éles Pages ellenőrzés a push UTÁN történik (lásd PROJECT_STATE).
+
+
+---
+
+# V5 TELJES KÉP-AUDIT + FINAL POLISH — 2026-10-01
+
+## Módszer
+Pixel-eloszlás elemzés mind az 5 asseten (PIL, oszlop-fényerő profil), majd dedikált crop-teszt oldal
+(_brandwork/crop_test.html): 15 tervezett arány+object-position kombináció képernyőképen vizuálisan kiértékelve.
+CSAK a vizuálisan igazolt cropok kerültek be.
+
+## Végleges crop-döntések (vizuálisan igazolva)
+| Kép (arány) | Használat | Új beállítás | Miért jó |
+|---|---|---|---|
+| dark-bottles (2.28) | galéria m-lead | **16/9 @50% 50%** (régi: 3/4 @62% 42% — TÖRÖLVE) | kéz + palack + Bormámor-címke + piros kapucni együtt látszik; a széles kép már nem állóba kényszerítve |
+| dark-bottles (2.28) | alkalom-visual | 4/3 @50% 50% | kéz+palack+címke kompozíció épen |
+| statement-kulcs (2.28) | statement-figure | **16/10 @50% 45%** (régi: 4/3.4) | teljes kulcslyuk+lockup középen, cinematic; mobil ≤1180: 16/9 ugyanazzal a pozícióval |
+| statement-kulcs (2.28) | alkalom-visual | 4/3 @50% 45% | lockup középen |
+| spirit-shelf (2.28) | specials-figure | **3/2 @50% 50%** (régi: 4/3.2 @55% 40%) | dugóhúzó + mindkét bélyegzett parafa + vízjel együtt |
+| spirit-shelf (2.28) | alkalom-visual | 4/3 @55% 50% | kompozíció épen |
+| post-13 (1.0) | alkalom-visual | 4/3 @50% 42% | embléma teljes, teteje nem vágódik |
+| fb-kulcs-vizual (1.33) | galéria | természetes arány (nincs crop) | kollázs teljes |
+| post-13 (1.0) | galéria | természetes square | teljes |
+
+## .occ-visual: 4/4.6 → 4/3
+A majdnem-portré konténer 57%-ra vágta le a landscape képeket. 4/3-mal mind a 4 váltókép
+(személyre szabott object-position-nel) épen jelenik meg; a grid balance jobb.
+
+## Galéria
+- m-lead: 3/4 → 16/9 landscape; a többi kép TERMÉSZTES képarányán marad (masonry változatos ritmus)
+- Caption + aria-label igazítás: „Kézben tartott palack — Bormámor címkével” (a kép valós tartalma)
+- Wine-index float-preview pozíciók javítva az igazolt cropokra (50/45, 50/50, 55/50)
+
+## Ellenőrzések (EXECUTED)
+- 390/768/1440: docScrollW < innerWidth (380/758/1430) — 0 overflow
+- computed aspect-ratio + object-position minden kritikus képen ellenőrizve (390/768/1440)
+- Lightbox: nyit (új caption), valódi ArrowRight lapozás, Escape, scroll-lock visszaadás — PASS
+- occ menü képváltás (2. sor → post-13, @50% 42%) — PASS
+- Konzol: 0 üzenet; törött kép: 0
+- Vizuális képernyőképek: statement/specials/alkalom/galéria 1440 + 390 — minden téma épen látszik

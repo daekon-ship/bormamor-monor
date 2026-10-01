@@ -510,7 +510,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 .statement-figure { margin: 0; }
 .statement-figure img {
-  width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; object-position: 48% 45%;
+  width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 45%;
 }
 
 /* ============================================================
@@ -626,7 +626,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .specials-note { color: var(--ink-soft); font-size: .95rem; max-width: 48ch; margin: 0 0 1.8rem; }
 .specials-figure { margin: 0; }
 .specials-figure img {
-  width: 100%; aspect-ratio: 4 / 3.2; object-fit: cover; object-position: 55% 40%;
+  width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: 50% 50%;
 }
 .specials-figure figcaption {
   margin-top: .8rem;
@@ -678,7 +678,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .occ-row.is-active .occ-body p { max-height: 5em; opacity: 1; margin-top: .15rem; }
 .occ-visual {
   position: relative; margin: 0;
-  aspect-ratio: 4 / 4.6; overflow: clip;
+  aspect-ratio: 4 / 3; overflow: clip;
   border-radius: 4px;
 }
 .occ-visual img {
@@ -972,8 +972,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   text-align: left;
 }
 
-/* --- Galéria anchor kép --- */
-.m-lead .m-btn img { aspect-ratio: 3 / 4; object-fit: cover; object-position: 62% 42%; }
+/* --- Galéria anchor kép (landscape, természetes tartalomhoz igazítva) --- */
+.m-lead .m-btn img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 50%; }
 .m-lead figcaption { font-size: .82rem; }
 
 /* --- Kóstoló tag-ek --- */
