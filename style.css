@@ -4,37 +4,53 @@
    Tipográfia: Fraunces (display) + Inter (UI)
    ============================================================ */
 
-/* ---------- Fontok (self-hosted, magyar ékezetekkel) ---------- */
+/* ---------- Fontok (self-hosted, magyar ékezetekkel): Cormorant + Jost ---------- */
 @font-face {
-  font-family: 'Fraunces';
+  font-family: 'Cormorant';
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url('assets/fonts/fraunces-latin.woff2') format('woff2');
+  src: url('assets/fonts/cormorant-normal-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
 }
 @font-face {
-  font-family: 'Fraunces';
+  font-family: 'Cormorant';
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url('assets/fonts/fraunces-latin-ext.woff2') format('woff2');
+  src: url('assets/fonts/cormorant-normal-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113;
 }
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
+  font-family: 'Cormorant';
+  font-style: italic;
+  font-weight: 300 700;
   font-display: swap;
-  src: url('assets/fonts/inter-latin.woff2') format('woff2');
+  src: url('assets/fonts/cormorant-italic-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Cormorant';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('assets/fonts/cormorant-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113;
+}
+@font-face {
+  font-family: 'Jost';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('assets/fonts/inter-latin-ext.woff2') format('woff2');
+  src: url('assets/fonts/jost-normal-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122;
+}
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('assets/fonts/jost-normal-latin-ext.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113;
 }
 
@@ -63,8 +79,8 @@
   --ink: #2A1216;
   --ink-soft: #5C4448;
 
-  --font-display: 'Fraunces', 'Georgia', serif;
-  --font-ui: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Cormorant', 'Georgia', serif;
+  --font-ui: 'Jost', 'Futura', 'Segoe UI', sans-serif;
 
   --container: 1240px;
   --container-wide: 1440px;
@@ -122,18 +138,18 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 /* ---------- Típusok ---------- */
 .display {
   font-family: var(--font-display);
-  font-weight: 380;
-  line-height: 1.04;
-  letter-spacing: -.015em;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -.004em;
   margin: 0 0 .6em;
-  font-size: clamp(2rem, 4.4vw, 3.6rem);
+  font-size: clamp(2.1rem, 4.7vw, 3.9rem);
   text-wrap: balance;
 }
-.display-xl { font-size: clamp(2.3rem, 6vw, 5rem); }
+.display-xl { font-size: clamp(2.45rem, 6.4vw, 5.4rem); }
 .display em { font-style: italic; color: var(--bronze-soft); }
 .eyebrow {
-  font-size: .78rem;
-  font-weight: 600;
+  font-size: .8rem;
+  font-weight: 500;
   letter-spacing: .32em;
   text-transform: uppercase;
   color: var(--bronze);
@@ -155,8 +171,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   display: inline-flex; align-items: center; justify-content: center; gap: .55em;
   font-family: var(--font-ui);
   font-size: .95rem; font-weight: 600; letter-spacing: .02em;
-  padding: .92em 1.7em;
-  border-radius: 999px;
+  padding: .95em 1.75em;
+  border-radius: 3px;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
@@ -187,7 +203,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .btn-dark { background: var(--wine-800); color: var(--champagne); }
 .btn-dark:hover { background: var(--wine-700); }
 
-.btn-lg { padding: 1.05em 2.1em; font-size: 1.02rem; }
+.btn-lg { padding: 1.08em 2.2em; font-size: 1.02rem; }
 
 /* ============================================================
    HEADER
@@ -201,10 +217,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   height: var(--header-h);
 }
 .site-header.scrolled {
-  background: rgba(18, 9, 11, .78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 rgba(243,235,221,.08), 0 12px 32px -18px rgba(0,0,0,.6);
+  background: rgba(19, 10, 12, .6);
+  backdrop-filter: blur(10px) saturate(1.05);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  box-shadow: 0 1px 0 rgba(243,235,221,.07);
 }
 .brand { display: inline-flex; flex-shrink: 0; }
 .brand-logo { height: 44px; width: auto; transition: height .3s var(--ease-out); }
@@ -232,7 +248,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .site-nav a:hover, .site-nav a.current { color: var(--champagne); }
 .site-nav a:hover::after, .site-nav a.current::after { transform: scaleX(1); transform-origin: left; }
 
-.nav-cta { padding: .62em 1.3em; font-size: .88rem; }
+.nav-cta { padding: .6em 1.25em; font-size: .88rem; border-radius: 3px; }
 
 .nav-toggle {
   display: none;
@@ -328,17 +344,17 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 .hero-title {
   font-family: var(--font-display);
-  font-weight: 350;
-  font-size: clamp(2.9rem, 7.2vw, 6.6rem);
-  line-height: 1.02;
-  letter-spacing: -.02em;
+  font-weight: 450;
+  font-size: clamp(2.8rem, 7.6vw, 7.2rem);
+  line-height: 1.05;
+  letter-spacing: -.008em;
   margin: 0 0 1.4rem;
   text-wrap: balance;
 }
 .hero-title .line { display: block; overflow: hidden; }
 .hero-title .line > span { display: inline-block; }
 .hero-title em { font-style: italic; color: var(--bronze-soft); }
-.hero-title .line-tail { font-size: .52em; letter-spacing: 0; color: color-mix(in srgb, var(--champagne) 85%, transparent); margin-top: .5em; }
+.hero-title .line-tail { font-size: .56em; letter-spacing: 0; font-style: italic; color: color-mix(in srgb, var(--champagne) 88%, transparent); margin-top: .45em; }
 
 .hero-sub {
   max-width: 44ch;
@@ -423,20 +439,16 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 /* ============================================================
    STATEMENT
    ============================================================ */
-.statement { padding-block: clamp(5rem, 10vw, 9rem); }
+.statement { padding-block: clamp(6rem, 12vw, 11.5rem); }
 .statement-grid {
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: clamp(2.5rem, 6vw, 6rem);
   align-items: center;
 }
-.statement-title { font-size: clamp(2.4rem, 5vw, 4.4rem); color: var(--wine-900); }
+.statement-title { font-size: clamp(2.6rem, 5.6vw, 5.1rem); color: var(--wine-900); }
+.statement-title em { font-style: italic; font-weight: 500; color: var(--wine-500); }
 .statement-title .accent { color: var(--wine-500); }
-.key-inline img {
-  display: inline-block; height: .78em; width: auto;
-  margin-right: .12em; vertical-align: -2%;
-  transform: rotate(-14deg);
-}
 .lead {
   font-size: clamp(1.08rem, 1.5vw, 1.3rem);
   line-height: 1.75;
@@ -486,7 +498,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 .wine-row:hover { background: rgba(243,235,221,.045); padding-left: clamp(1.2rem, 2.6vw, 2.6rem); }
 .wine-num {
-  font-size: .8rem; letter-spacing: .18em; color: var(--bronze);
+  font-size: .85rem; letter-spacing: .2em; color: var(--bronze); font-weight: 500;
 }
 .wine-name {
   font-family: var(--font-display);
@@ -511,7 +523,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 /* lebegő előnézeti kép (csak pointer: fine) */
 .float-preview {
   position: fixed; z-index: 40;
-  width: min(330px, 26vw); aspect-ratio: 4/3;
+  width: min(360px, 27vw); aspect-ratio: 4/3;
+  border: 1px solid rgba(243,235,221,.14);
   border-radius: 6px; overflow: clip;
   pointer-events: none;
   opacity: 0; transform: scale(.92) rotate(-1.5deg);
@@ -539,23 +552,23 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   align-items: center;
 }
 .specials-list {
-  list-style: none;
-  margin: 1.4rem 0 1.8rem; padding: 0;
-  display: flex; flex-wrap: wrap; gap: .55rem .55rem;
+  list-style: none; counter-reset: sl;
+  margin: 1.5rem 0 1.9rem; padding: 0;
 }
 .specials-list li {
-  font-size: .95rem; font-weight: 500;
-  color: var(--wine-800);
-  padding: .5em 1.05em;
-  border: 1px solid color-mix(in srgb, var(--wine-800) 28%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, #fff 36%, transparent);
-  transition: background-color .3s, border-color .3s, transform .3s var(--ease-out);
+  counter-increment: sl;
+  display: flex; align-items: baseline; gap: 1rem;
+  padding: .8rem .2rem .8rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--wine-800) 16%, transparent);
 }
-.specials-list li:hover {
-  background: var(--wine-500); border-color: var(--wine-500); color: var(--champagne);
-  transform: translateY(-2px);
+.specials-list li::before {
+  content: counter(sl, decimal-leading-zero);
+  font-family: var(--font-display); font-style: italic;
+  font-size: .95rem; color: var(--bronze-text);
+  min-width: 1.9em;
 }
+.sl-name { font-size: 1.02rem; font-weight: 500; color: var(--wine-900); }
+.sl-sec { margin-left: auto; text-align: right; font-size: .9rem; color: var(--ink-soft); font-style: italic; }
 .specials-note { color: var(--ink-soft); font-size: .95rem; max-width: 48ch; margin: 0 0 1.8rem; }
 .specials-figure { margin: 0; }
 .specials-figure img {
@@ -568,69 +581,65 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 
 /* ============================================================
-   ALKALOM — tiles
+   ALKALOMHOZ VÁLASZTUNK — luxury editorial menü
    ============================================================ */
-.occasions { padding-block: clamp(5rem, 10vw, 9rem); }
-.occasions .section-head { margin-bottom: clamp(2.2rem, 5vw, 4rem); }
-.occasion-grid {
-  list-style: none; margin: 0; padding: 0;
+.occasions { padding-block: clamp(5rem, 11vw, 10rem); }
+.occasions .section-head { margin-bottom: clamp(2.4rem, 5.5vw, 4.5rem); }
+.occ-wrap {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
 }
-.occasion-tile {
-  position: relative;
-  aspect-ratio: 3 / 4.4;
-  overflow: clip;
-  isolation: isolate;
-  display: flex; align-items: flex-end;
-  background-image: var(--img);
-  background-size: cover;
-  background-position: center 40%;
+.occ-menu { border-top: 1px solid rgba(243,235,221,.16); }
+.occ-row {
+  display: grid; grid-template-columns: 3.2rem 1fr; gap: 1.1rem;
+  padding: 1.5rem 1rem 1.5rem .6rem;
+  border-bottom: 1px solid rgba(243,235,221,.16);
+  cursor: pointer;
+  transition: background-color .35s, padding-left .4s var(--ease-out);
 }
-.occasion-tile:first-child { border-radius: 10px 0 0 10px; }
-.occasion-tile:last-child { border-radius: 0 10px 10px 0; }
-.tile-scrim {
-  position: absolute; inset: 0; z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(18,10,12,.1) 30%, rgba(18,10,12,.82) 86%),
-    rgba(36,16,19,.28);
-  transition: background-color .5s;
+.occ-row:hover, .occ-row:focus-visible { background: rgba(243,235,221,.05); padding-left: 1.3rem; }
+.occ-row.is-active { background: rgba(243,235,221,.04); padding-left: 1.3rem; }
+.occ-num {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 1.25rem; line-height: 1.5;
+  color: var(--bronze); transition: color .3s;
 }
-.occasion-tile:hover .tile-scrim { background-color: rgba(60,20,28,.42); }
-.occasion-tile::after {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: var(--img) center 40% / cover;
-  opacity: 0; transform: scale(1.08);
-  transition: opacity .6s var(--ease-out), transform 1.2s var(--ease-out);
-}
-.occasion-tile:hover::after { opacity: 1; transform: scale(1); }
-.tile-body {
-  padding: 1.5rem 1.4rem;
-  transform: translateY(14px);
-  transition: transform .5s var(--ease-out);
-}
-.occasion-tile:hover .tile-body { transform: none; }
-.tile-body h3 {
+.occ-row.is-active .occ-num { color: var(--bronze-soft); }
+.occ-body h3 {
   font-family: var(--font-display);
-  font-weight: 400; font-size: 1.5rem;
-  margin: 0 0 .45rem; letter-spacing: .01em;
+  font-weight: 500; font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+  margin: 0 0 .3rem; line-height: 1.15;
+  color: color-mix(in srgb, var(--champagne) 72%, transparent);
+  transition: color .35s;
 }
-.tile-body p {
-  margin: 0; font-size: .9rem; line-height: 1.55;
-  color: color-mix(in srgb, var(--champagne) 80%, transparent);
-  opacity: 0; transition: opacity .45s .08s;
-  max-height: 0; overflow: hidden;
+.occ-row.is-active .occ-body h3, .occ-row:hover .occ-body h3 { color: var(--champagne); }
+.occ-body p {
+  margin: 0; font-size: .95rem; line-height: 1.6;
+  color: color-mix(in srgb, var(--champagne) 62%, transparent);
+  max-height: 0; opacity: 0; overflow: hidden;
+  transition: max-height .5s var(--ease-out), opacity .4s .05s, margin .4s;
 }
-.occasion-tile:hover .tile-body p,
-.occasion-tile:focus-within .tile-body p { opacity: 1; max-height: 6em; }
-
-.occasion-cta {
-  margin-top: clamp(2.4rem, 5vw, 3.6rem);
-  display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2rem;
+.occ-row.is-active .occ-body p { max-height: 5em; opacity: 1; margin-top: .15rem; }
+.occ-visual {
+  position: relative; margin: 0;
+  aspect-ratio: 4 / 4.6; overflow: clip;
+  border-radius: 4px;
 }
-.occasion-cta-line {
-  margin: 0; font-family: var(--font-display); font-style: italic;
-  font-size: 1.15rem; color: color-mix(in srgb, var(--champagne) 75%, transparent);
+.occ-visual img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0; transform: scale(1.045);
+  transition: opacity .7s var(--ease-out), transform 1.3s var(--ease-out);
+}
+.occ-visual img.is-active { opacity: 1; transform: scale(1); }
+.occ-visual::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(200deg, transparent 55%, rgba(18,10,12,.38));
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .occ-visual img { transition: opacity .01ms; transform: none; }
 }
 
 /* ============================================================
@@ -646,11 +655,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .tastings .eyebrow { color: var(--bronze-text); }
 .tastings-grid {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: clamp(2.5rem, 6vw, 6rem);
-  align-items: center;
-  padding-bottom: clamp(4rem, 8vw, 6.5rem);
+  grid-template-columns: minmax(0, 1fr);
+  padding-bottom: clamp(4.5rem, 9vw, 7rem);
 }
+.tastings-copy { max-width: 760px; }
 .tastings-figure { margin: 0; max-width: 420px; }
 .tastings-figure img { width: 100%; }
 .tastings-copy p {
@@ -671,7 +679,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .monor {
   position: relative; overflow: clip;
   isolation: isolate;
-  padding-block: clamp(6rem, 14vw, 12rem);
+  padding-block: clamp(7rem, 16vw, 14rem);
 }
 .monor-media { position: absolute; inset: -10% 0; z-index: -2; }
 .monor-media img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
@@ -695,7 +703,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 /* ============================================================
    GALÉRIA — masonry
    ============================================================ */
-.gallery { padding-block: clamp(5rem, 10vw, 9rem); }
+.gallery { padding-block: clamp(5.5rem, 11vw, 10rem); }
 .masonry {
   columns: 3 300px;
   column-gap: 1.1rem;
@@ -818,6 +826,22 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .s-call { color: var(--bronze-soft); }
 .s-map { border-left: 1px solid rgba(243,235,221,.14); }
 
+/* --- Szöveges CTA (editorial másodlagos akció) --- */
+.link-cta {
+  display: inline-flex; align-items: center; gap: .5em;
+  font-family: var(--font-ui);
+  font-size: .95rem; font-weight: 600; letter-spacing: .03em;
+  color: inherit; text-decoration: none;
+  padding: .35em 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--bronze) 55%, transparent);
+  transition: border-color .3s, color .3s;
+}
+.link-cta .btn-arrow { color: var(--bronze); }
+.link-cta:hover { border-color: var(--bronze-soft); color: var(--bronze-soft); }
+.section-light .link-cta, .tastings .link-cta { color: var(--wine-800); border-color: color-mix(in srgb, var(--wine-800) 45%, transparent); }
+.section-light .link-cta .btn-arrow, .tastings .link-cta .btn-arrow { color: var(--bronze-text); }
+.section-light .link-cta:hover, .tastings .link-cta:hover { color: var(--wine-500); border-color: var(--wine-500); }
+
 /* ============================================================
    V2 POLISH RÉTEG
    ============================================================ */
@@ -878,14 +902,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 .kd-line:last-child { transform: scaleX(-1); }
 
-/* --- Statement ónvessző --- */
-.statement-quote {
-  position: absolute; left: -.5em; top: -0.28em;
-  font-family: var(--font-display); font-size: 5.5em; line-height: 1;
-  color: color-mix(in srgb, var(--wine-500) 26%, transparent);
-  pointer-events: none; user-select: none;
-}
-.statement-copy { position: relative; }
 
 /* --- Galéria figure + felirat + gomb --- */
 .m-item { border-radius: 6px; background: #fff; box-shadow: 0 1px 0 rgba(42,18,22,.06); }
@@ -912,6 +928,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   text-align: left;
 }
 
+/* --- Galéria anchor kép --- */
+.m-lead .m-btn img { aspect-ratio: 3 / 4; object-fit: cover; object-position: 62% 42%; }
+.m-lead figcaption { font-size: .82rem; }
+
 /* --- Kóstoló tag-ek --- */
 .tasting-tags {
   list-style: none; display: flex; flex-wrap: wrap; gap: .5rem;
@@ -927,7 +947,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .contact-phone {
   display: inline-block;
   font-family: var(--font-display);
-  font-weight: 350; font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+  font-weight: 500; font-size: clamp(1.9rem, 3.6vw, 3.2rem);
   color: var(--champagne); text-decoration: none;
   margin: 0 0 1.6rem;
   line-height: 1.1;
@@ -972,7 +992,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   .occasion-tile:first-child, .occasion-tile:last-child { border-radius: 10px; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .site-nav, .nav-cta { display: none; }
   .nav-toggle { display: block; margin-left: auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1021,7 +1041,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   .wine-name { font-size: 1.45rem; }
 
   .masonry { columns: 2 140px; column-gap: .7rem; }
-  .m-item { margin-bottom: .7rem; border-radius: 3px; }
+  .m-item { margin-bottom: .7rem; }
+  .occ-wrap { grid-template-columns: 1fr; }
+  .occ-visual { display: none; }
+  .occ-row.is-active .occ-body p { max-height: 6em; }
+  .contact-phone { font-size: clamp(1.7rem, 8.4vw, 2.4rem); }
 
   .specials-list { gap: .45rem; }
   .specials-list li { font-size: .88rem; padding: .42em .9em; }

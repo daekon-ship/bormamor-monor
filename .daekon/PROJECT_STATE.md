@@ -43,6 +43,7 @@ Teljes prémium one-page weboldal a Bormámor Monor Borkereskedés számára, az
       galéria figure+figcaption kártyákon, keyboard-focusable alkalmi tile-ok, editorial 3-oszlopos footer
 - [x] GitHub repo + Pages: https://daekon-ship.github.io/bormamor-monor/
 - [x] Éles füstteszt: HTTP 200, 0 törött kép, fontok OK, overflow 0
+- [x] V3 final refinement: Cormorant+Jost tipográfia, kúrált galéria (6), editorial alkalom-menü, copy+alt javítások, 504 KB, 13 viewport audit
 - [ ] Egyedi domain (ha a megrendelő hoz) — DNS + CNAME + og:url frissítés
 
 ## Auditálás közben javított hibák

@@ -26,10 +26,8 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Fonts: self-hosted, preload -->
-  <link rel="preload" href="assets/fonts/fraunces-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <noscript><style>.reveal,.hero-anim{opacity:1 !important;transform:none !important;animation:none !important}.img-reveal::after{display:none}.img-reveal img{transform:none}.mobile-menu{display:none}</style></noscript>
 
@@ -44,7 +42,8 @@
     "slogan": "Kulcs a minőséghez",
     "telephone": "+36203830016",
     "email": "bormamormonor@gmail.com",
-    "image": "assets/img/og-bormamor.jpg",
+    "url": "https://daekon-ship.github.io/bormamor-monor/",
+    "image": "https://daekon-ship.github.io/bormamor-monor/assets/img/og-bormamor.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Kiss Ernő utca 9.",
@@ -127,8 +126,8 @@
       </h1>
       <p class="hero-sub hero-anim" style="--d:.78s">Válogatott helyi borok, különleges tételek és személyes ajánlás Monor szívében.</p>
       <div class="hero-cta hero-anim" style="--d:.92s">
-        <a class="btn btn-primary magnetic" href="#boraink">Fedezd fel a Bormámort <span class="btn-arrow" aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost magnetic" href="https://www.google.com/maps/dir/?api=1&amp;destination=Borm%C3%A1mor+Monor+Borkeresked%C3%A9s%2C+2200+Monor%2C+Kiss+Ern%C5%91+utca+9" rel="noopener">Útvonaltervezés</a>
+        <a class="btn btn-primary magnetic" href="#boraink">Fedezd fel a Bormámort<span class="btn-arrow" aria-hidden="true">→</span></a>
+        <a class="link-cta magnetic" href="https://www.google.com/maps/dir/?api=1&amp;destination=Borm%C3%A1mor+Monor+Borkeresked%C3%A9s%2C+2200+Monor%2C+Kiss+Ern%C5%91+utca+9" rel="noopener">Útvonaltervezés<span class="btn-arrow" aria-hidden="true">→</span></a>
       </div>
       <p class="hero-addr hero-anim" style="--d:1.05s">
         <svg class="key-mini" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 12h10M17 12v4M20.5 12v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -151,9 +150,8 @@
   <section class="statement section-light" id="bormamor">
     <div class="container statement-grid">
       <div class="statement-copy">
-        <span class="statement-quote" aria-hidden="true">“</span>
         <h2 class="display statement-title reveal">
-          <span class="key-inline"><img src="assets/img/logos/key-bronze.png" alt="" aria-hidden="true"></span>Kulcs a minőséghez<span class="accent">.</span>
+          Kulcs a <em>minőséghez</em><span class="accent">.</span>
         </h2>
         <p class="lead reveal" style="--d:.12s">
           A Bormámor azért jött létre, hogy Monor borai és a környék különleges értékei egy helyen legyenek elérhetők.
@@ -162,7 +160,7 @@
         <p class="statement-sign reveal" style="--d:.22s">Borkereskedés • Monor</p>
       </div>
       <figure class="statement-figure img-reveal reveal" style="--d:.2s">
-        <img src="assets/img/statement-kulcs.webp" alt="Meleg fényben úszó palackok a Bormámor kínálatából" width="1640" height="720" loading="lazy" decoding="async">
+        <img src="assets/img/statement-kulcs.webp" alt="Parafadugók a Bormámor emblémájával, meleg fényben" width="1640" height="720" loading="lazy" decoding="async">
       </figure>
     </div>
   </section>
@@ -177,31 +175,31 @@
       </header>
 
       <ul class="wine-index" data-wine-index>
-        <li class="wine-row reveal" data-img="assets/img/post-10.webp" style="--d:.05s">
+        <li class="wine-row reveal" data-img="assets/img/statement-kulcs.webp" data-pos="18% 30%" style="--d:.05s">
           <span class="wine-num" aria-hidden="true">01</span>
           <h3 class="wine-name">Friss fehérek</h3>
           <p class="wine-note">Könnyű, élénk — kerti vacsorákhoz.</p>
           <span class="wine-arrow" aria-hidden="true">→</span>
         </li>
-        <li class="wine-row reveal" data-img="assets/img/statement-kulcs.webp" style="--d:.1s">
+        <li class="wine-row reveal" data-img="assets/img/statement-kulcs.webp" data-pos="82% 26%" style="--d:.1s">
           <span class="wine-num" aria-hidden="true">02</span>
           <h3 class="wine-name">Illatos rosék</h3>
           <p class="wine-note">Terasz, naplemente, semmi sietség.</p>
           <span class="wine-arrow" aria-hidden="true">→</span>
         </li>
-        <li class="wine-row reveal" data-img="assets/img/dark-bottles.webp" style="--d:.15s">
+        <li class="wine-row reveal" data-img="assets/img/dark-bottles.webp" data-pos="30% 55%" style="--d:.15s">
           <span class="wine-num" aria-hidden="true">03</span>
           <h3 class="wine-name">Különleges sillerek</h3>
           <p class="wine-note">Amikor a megszokotton túlra viszünk.</p>
           <span class="wine-arrow" aria-hidden="true">→</span>
         </li>
-        <li class="wine-row reveal" data-img="assets/img/post-11.webp" style="--d:.2s">
+        <li class="wine-row reveal" data-img="assets/img/spirit-shelf.webp" data-pos="72% 62%" style="--d:.2s">
           <span class="wine-num" aria-hidden="true">04</span>
           <h3 class="wine-name">Vörösborok</h3>
           <p class="wine-note">Testes tételek hosszú estékre.</p>
           <span class="wine-arrow" aria-hidden="true">→</span>
         </li>
-        <li class="wine-row reveal" data-img="assets/img/fb-kulcs-vizual.webp" style="--d:.25s">
+        <li class="wine-row reveal" data-img="assets/img/fb-kulcs-vizual.webp" data-pos="50% 78%" style="--d:.25s">
           <span class="wine-num" aria-hidden="true">05</span>
           <h3 class="wine-name">Pezsgők</h3>
           <p class="wine-note">Az alkalom, ami még csak készülődik.</p>
@@ -209,7 +207,7 @@
         </li>
       </ul>
 
-      <p class="wines-note reveal">A választék folyamatosan mozog — a friss sillerekért érdemes benézni hozzánk vagy telefonon egyeztetni.</p>
+      <p class="wines-note reveal">A választék folyamatosan változik — az aktuális tételekért érdemes benézni hozzánk vagy telefonon érdeklődni.</p>
     </div>
     <div class="float-preview" data-float-preview aria-hidden="true"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></div>
   </section>
@@ -220,24 +218,24 @@
       <div class="specials-copy">
         <header class="section-head reveal">
           <p class="eyebrow"><span class="eyebrow-num">02</span>Nem csak bor</p>
-          <h2 class="display">Több, mint egy borszaküzlet.</h2>
+          <h2 class="display">Több mint egy borszaküzlet.</h2>
         </header>
         <p class="reveal" style="--d:.1s">A kínálatban időszakosan megtalálhatók:</p>
-        <ul class="specials-list reveal" style="--d:.16s">
-          <li><span>Minőségi magyar borok</span><span>pezsgők</span></li>
-          <li><span>Kézműves sörök</span><span>pálinkák</span></li>
-          <li><span>Prémium whisky</span><span>gin</span></li>
-          <li><span>Rum</span><span>konyak</span></li>
-          <li><span>Helyi és kézműves gasztronómiai különlegességek</span></li>
-        </ul>
+        <ol class="specials-list reveal" style="--d:.16s">
+          <li><span class="sl-name">Minőségi magyar borok</span><span class="sl-sec">pezsgők</span></li>
+          <li><span class="sl-name">Kézműves sörök</span><span class="sl-sec">pálinkák</span></li>
+          <li><span class="sl-name">Prémium whisky</span><span class="sl-sec">gin</span></li>
+          <li><span class="sl-name">Rum</span><span class="sl-sec">konyak</span></li>
+          <li><span class="sl-name">Helyi és kézműves gasztronómiai különlegességek</span></li>
+        </ol>
         <p class="specials-note reveal" style="--d:.22s">A készlet időnként változik — válogatott különlegességekért érdeklődj üzletünkben.</p>
         <div class="specials-cta reveal" style="--d:.28s">
-          <a class="btn btn-dark magnetic" href="tel:+36203830016">Hívás: +36 20 383 0016</a>
+          <a class="btn btn-dark magnetic" href="tel:+36203830016">Hívás: +36 20 383 0016<span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
       <figure class="specials-figure img-reveal reveal" style="--d:.2s">
-        <img src="assets/img/spirit-shelf.webp" alt="Gondosan rendezett italpolc meleg fényben" width="1640" height="720" loading="lazy" decoding="async">
-        <figcaption>A polcokon mindig van miért bentmaradni.</figcaption>
+        <img src="assets/img/hero-pince.webp" alt="A Bormámor üzletbejárata és a jól felszerelt italpolc" width="1640" height="720" loading="lazy" decoding="async">
+        <figcaption>Kiss Ernő utca 9. — a polcokon mindig van miért bentmaradni.</figcaption>
       </figure>
     </div>
   </section>
@@ -250,36 +248,44 @@
         <h2 class="display display-xl">Nem kell értened a borhoz.<br>Elég tudnod, <em>milyen alkalomra</em> keresed.</h2>
       </header>
 
-      <ul class="occasion-grid">
-        <li class="occasion-tile reveal" tabindex="0" style="--d:.05s; --img:url('assets/img/hero-pince.webp')">
-          <div class="tile-scrim" aria-hidden="true"></div>
-          <div class="tile-body">
-            <h3>Vacsorához</h3>
-            <p>Olyan palack, ami nem lopja el a show-t — csak tökéletesíti az estét.</p>
+      <div class="occ-wrap reveal">
+        <div class="occ-menu" data-occ-menu>
+          <div class="occ-row is-active" data-occ tabindex="0">
+            <span class="occ-num" aria-hidden="true">01</span>
+            <div class="occ-body">
+              <h3>Vacsorához</h3>
+              <p>Olyan palack, ami nem lopja el a show-t — csak tökéletesíti az estét.</p>
+            </div>
           </div>
-        </li>
-        <li class="occasion-tile reveal" tabindex="0" style="--d:.12s; --img:url('assets/img/statement-kulcs.webp')">
-          <div class="tile-scrim" aria-hidden="true"></div>
-          <div class="tile-body">
-            <h3>Ajándékba</h3>
-            <p>Ami átadás után is történet marad.</p>
+          <div class="occ-row" data-occ tabindex="0">
+            <span class="occ-num" aria-hidden="true">02</span>
+            <div class="occ-body">
+              <h3>Ajándékba</h3>
+              <p>Ami átadás után is történet marad.</p>
+            </div>
           </div>
-        </li>
-        <li class="occasion-tile reveal" tabindex="0" style="--d:.19s; --img:url('assets/img/spirit-shelf.webp')">
-          <div class="tile-scrim" aria-hidden="true"></div>
-          <div class="tile-body">
-            <h3>Baráti estékhez</h3>
-            <p>A beszélgetés fűszere, pohárral töltve.</p>
+          <div class="occ-row" data-occ tabindex="0">
+            <span class="occ-num" aria-hidden="true">03</span>
+            <div class="occ-body">
+              <h3>Baráti estékhez</h3>
+              <p>A beszélgetés fűszere, pohárral töltve.</p>
+            </div>
           </div>
-        </li>
-        <li class="occasion-tile reveal" tabindex="0" style="--d:.26s; --img:url('assets/img/post-09.webp')">
-          <div class="tile-scrim" aria-hidden="true"></div>
-          <div class="tile-body">
-            <h3>Valami különlegeshez</h3>
-            <p>Amikor a megszokott már nem elég.</p>
+          <div class="occ-row" data-occ tabindex="0">
+            <span class="occ-num" aria-hidden="true">04</span>
+            <div class="occ-body">
+              <h3>Valami különlegeshez</h3>
+              <p>Amikor a megszokott már nem elég.</p>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+        <figure class="occ-visual img-reveal in" aria-hidden="true">
+          <img class="is-active" src="assets/img/statement-kulcs.webp" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/post-13.webp" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/spirit-shelf.webp" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/dark-bottles.webp" alt="" loading="lazy" decoding="async">
+        </figure>
+      </div>
 
       <div class="occasion-cta reveal">
         <p class="occasion-cta-line">Nem tudod, melyik a te alkalomod?</p>
@@ -291,9 +297,6 @@
   <!-- ================= KÓSTOLÓK ================= -->
   <section class="tastings" id="kostolok">
     <div class="container tastings-grid">
-      <figure class="tastings-figure img-reveal reveal">
-        <img src="assets/img/post-11.webp" alt="A Bormámor kulcs-emblémája bordó háttéren" width="1000" height="1000" loading="lazy" decoding="async">
-      </figure>
       <div class="tastings-copy">
         <header class="section-head reveal">
           <p class="eyebrow"><span class="eyebrow-num">04</span>Élmény</p>
@@ -307,18 +310,16 @@
           <li>gasztronómiai programok</li>
         </ul>
         <p class="reveal" style="--d:.1s">
-          Borkóstolók, pálinka- és whiskykóstolók, sörvacsorák és gasztronómiai programok — időszakosan,
-          minden alkalommal más témával. A pontos időpontokat a Facebook-oldalunkon jelenítjük meg.
+          Kóstolók és gasztronómiai programok időszakosan, változó témákkal rendezünk.
+          A következő alkalom időpontját mindig a Facebook-oldalunkon jelenítjük meg.
         </p>
         <div class="tastings-cta reveal" style="--d:.18s">
           <a class="btn btn-primary magnetic" href="tel:+36203830016">Érdeklődöm a következő alkalomról</a>
-          <a class="btn btn-ghost magnetic" href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook</a>
+          <a class="link-cta magnetic" href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook-programok<span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
-    <div class="tastings-divider" aria-hidden="true">
-      <img src="assets/img/post-12.webp" alt="" width="1000" height="1000" loading="lazy" decoding="async">
-    </div>
+
   </section>
 
   <!-- ================= MONOR ================= -->
@@ -331,17 +332,13 @@
       <p class="eyebrow reveal">Monori Pincefalu</p>
       <h2 class="display display-xl reveal" style="--d:.1s">Monor íze.<br>Monor története.</h2>
       <p class="monor-body reveal" style="--d:.2s">
-        Monor és környéke régóta borvidéki lélekkel él: a Pincefalu pincesorai, a helyi pincészetek munkája
-        és az itt élők vendégszeretete mind hozzátartozik. Ebből a tájból válogatunk minden héten —
-        és ebből a válogatásból várunk téged.
+        Monoron a bor és a pincekultúra régóta a helyi élet része: a Pincefalu pincesorai,
+        a környék pincészetei és az itt élők vendégszeretete nélkül nem lenne miből válogatnunk.
+        Abból válogatunk, amit itt, Monor környékén ismerünk.
       </p>
     </div>
   </section>
 
-  <!-- Szlogen sáv -->
-  <div class="slogan-band" aria-hidden="true">
-    <img src="assets/img/brand-slogan-banner.webp" alt="" width="1640" height="720" loading="lazy" decoding="async">
-  </div>
 
   <!-- ================= GALÉRIA ================= -->
   <section class="gallery section-light" id="galeria">
@@ -351,21 +348,16 @@
         <h2 class="display">Ami felismerhetővé teszi.</h2>
       </header>
       <div class="masonry">
-        <figure class="m-item reveal" style="--d:.02s">
+        <figure class="m-item reveal m-lead" style="--d:.02s">
             <button class="m-btn" data-lb="assets/img/hero-pince.webp" aria-label="Nagyítás: Pincehangulat — a Bormámor kínálata">
               <img src="assets/img/hero-pince.webp" alt="Pincehangulat a Bormámor kínálatából" width="1640" height="720" loading="lazy" decoding="async" style="object-position:62% 40%">
             </button>
             <figcaption>Pincehangulat — a Bormámor kínálata</figcaption>
           </figure>
-        <figure class="m-item reveal" style="--d:.05s">
-            <button class="m-btn" data-lb="assets/img/post-10.webp" aria-label="Nagyítás: Bormámor — üveg és szőlőlevél">
-              <img src="assets/img/post-10.webp" alt="Bormámor grafika: borosüveg szőlőlevéllel" width="1000" height="1000" loading="lazy" decoding="async">
-            </button>
-            <figcaption>Bormámor — üveg és szőlőlevél</figcaption>
-          </figure>
+        
         <figure class="m-item reveal" style="--d:.08s">
             <button class="m-btn" data-lb="assets/img/statement-kulcs.webp" aria-label="Nagyítás: Meleg fény, kulcs-embléma">
-              <img src="assets/img/statement-kulcs.webp" alt="Meleg fényben úszó palackok és a Bormámor kulcs-emblémája" width="1640" height="720" loading="lazy" decoding="async">
+              <img src="assets/img/statement-kulcs.webp" alt="Parafadugók a Bormámor emblémájával meleg fényben" width="1640" height="720" loading="lazy" decoding="async">
             </button>
             <figcaption>Meleg fény, kulcs-embléma</figcaption>
           </figure>
@@ -387,36 +379,16 @@
             </button>
             <figcaption>Asztalterítés a Bormámor vizuáljával</figcaption>
           </figure>
-        <figure class="m-item reveal" style="--d:.2s">
-            <button class="m-btn" data-lb="assets/img/post-09.webp" aria-label="Nagyítás: Kulcs-embléma poszton">
-              <img src="assets/img/post-09.webp" alt="Bormámor poszt a kulcs-emblémával" width="1000" height="1000" loading="lazy" decoding="async">
-            </button>
-            <figcaption>Kulcs-embléma poszton</figcaption>
-          </figure>
+        
         <figure class="m-item reveal" style="--d:.23s">
             <button class="m-btn" data-lb="assets/img/dark-bottles.webp" aria-label="Nagyítás: Sötét palackok, csendes fény">
               <img src="assets/img/dark-bottles.webp" alt="Sötét palackok csendes fényben" width="1640" height="720" loading="lazy" decoding="async">
             </button>
             <figcaption>Sötét palackok, csendes fény</figcaption>
           </figure>
-        <figure class="m-item reveal" style="--d:.26s">
-            <button class="m-btn" data-lb="assets/img/post-12.webp" aria-label="Nagyítás: Kulcs és palack line-artban">
-              <img src="assets/img/post-12.webp" alt="Kulcs és palack line-art grafika bordó háttéren" width="1000" height="1000" loading="lazy" decoding="async">
-            </button>
-            <figcaption>Kulcs és palack line-artban</figcaption>
-          </figure>
-        <figure class="m-item reveal" style="--d:.29s">
-            <button class="m-btn" data-lb="assets/img/post-11.webp" aria-label="Nagyítás: Fehér kulcs bordó alapon">
-              <img src="assets/img/post-11.webp" alt="Fehér kulcs-embléma bordó alapon" width="1000" height="1000" loading="lazy" decoding="async">
-            </button>
-            <figcaption>Fehér kulcs bordó alapon</figcaption>
-          </figure>
-        <figure class="m-item reveal" style="--d:.32s">
-            <button class="m-btn" data-lb="assets/img/brand-emblem-banner.webp" aria-label="Nagyítás: Bormámor banner">
-              <img src="assets/img/brand-emblem-banner.webp" alt="Bormámor banner a kulcs-emblémával" width="1640" height="720" loading="lazy" decoding="async">
-            </button>
-            <figcaption>Bormámor banner</figcaption>
-          </figure>
+        
+        
+        
       </div>
     </div>
   </section>
@@ -433,7 +405,6 @@
 
         <dl class="contact-list reveal" style="--d:.1s">
           <div><dt>Cím</dt><dd>2200 Monor, Kiss Ernő utca 9.</dd></div>
-          <div><dt>Telefon</dt><dd><a href="tel:+36203830016">+36 20 383 0016</a></dd></div>
           <div><dt>E-mail</dt><dd><a href="mailto:bormamormonor@gmail.com">bormamormonor@gmail.com</a></dd></div>
           <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/bormamormonor/" rel="noopener">Bormámor Monor</a></dd></div>
           <div class="hours">
@@ -447,9 +418,9 @@
         </dl>
 
         <div class="contact-cta reveal" style="--d:.2s">
-          <a class="btn btn-primary magnetic" href="tel:+36203830016">Hívás</a>
-          <a class="btn btn-ghost magnetic" href="https://www.google.com/maps/dir/?api=1&amp;destination=Borm%C3%A1mor+Monor+Borkeresked%C3%A9s%2C+2200+Monor%2C+Kiss+Ern%C5%91+utca+9" rel="noopener">Útvonaltervezés</a>
-          <a class="btn btn-ghost magnetic" href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook</a>
+          <a class="btn btn-primary magnetic" href="tel:+36203830016">Hívás most<span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="link-cta magnetic" href="https://www.google.com/maps/dir/?api=1&amp;destination=Borm%C3%A1mor+Monor+Borkeresked%C3%A9s%2C+2200+Monor%2C+Kiss+Ern%C5%91+utca+9" rel="noopener">Útvonaltervezés<span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="link-cta magnetic" href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook<span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
 

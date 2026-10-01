@@ -91,6 +91,7 @@
     rows.forEach(row => {
       row.addEventListener('mouseenter', () => {
         fpImg.src = row.dataset.img || '';
+        fpImg.style.objectPosition = row.dataset.pos || '50% 50%';
         active = true;
         floatPreview.classList.add('active');
       });
@@ -231,6 +232,22 @@
     openNow.classList.add(isOpen ? 'ok' : 'closed');
     openNow.textContent = isOpen ? 'Most nyitva' : 'Most zárva';
   }
+  /* ---------- Alkalomhoz választunk: editorial menü + képváltás ---------- */
+  const occMenu = $('[data-occ-menu]');
+  if (occMenu) {
+    const occRows = $$('[data-occ]', occMenu);
+    const visImgs = $$('.occ-visual img');
+    const activateOcc = (i) => {
+      occRows.forEach((r, k) => r.classList.toggle('is-active', k === i));
+      visImgs.forEach((im, k) => im.classList.toggle('is-active', k === i));
+    };
+    occRows.forEach((row, i) => {
+      row.addEventListener('mouseenter', () => activateOcc(i));
+      row.addEventListener('click', () => activateOcc(i));
+      row.addEventListener('focusin', () => activateOcc(i));
+    });
+  }
+
   const sections = $$('main section[id]');
   const navLinks = $$('.site-nav a');
   if ('IntersectionObserver' in window && navLinks.length) {

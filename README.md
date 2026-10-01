@@ -35,7 +35,7 @@ client-assets/      — az ügyfél által szolgáltatott eredeti fájlok (forr�
 
 - **Zero-framework statikus oldal** — nincs build lépés, nincs külső JS-könyvtár
 - Teljes oldal súlya **~0,7 MB**, az első képernyő ~0,4 MB (LCP-hez preloadolt hero)
-- Self-hosted változó fontok (Fraunces serif display + Inter UI), magyar ő/ű karakterekkel
+- Self-hosted fontok: **Cormorant** (reneszánsz display serif) + **Jost** (geometrikus sans), teljes magyar ő/ű támogatással
 - Minden kép WebP, art-directed `object-position` értékekkel
 - `prefers-reduced-motion` teljes körű támogatás, `<noscript>` fallback
 - WCAG AA kontraszt, billentyűzettel kezelhető lightbox és menü

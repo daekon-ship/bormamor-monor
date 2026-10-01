@@ -37,3 +37,36 @@ Dátum: 2026-10-01 • Build: statikus (index.html + style.css + main.js + asset
 ## Nyitott pontok
 - A preview szerver (`http://127.0.0.1:8613/index.html`) fut — éles telepítés (FTP/GitHub Pages) külön lépés, ha kérik.
 - `og:url` nincs beállítva (nincs ismert végleges domain) — telepítéskor pótolandó.
+
+
+---
+
+# V3 FINAL REFINEMENT — 2026-10-01 (második mester-prompt alapján)
+
+## Végrehajtott auditok és eredmények
+
+| Audit | Terjedelem | Eredmény |
+|---|---|---|
+| 0. Kód+élő oldal+asset review | teljes repó, pixel-statisztika minden kulcsképen | kész |
+| 1. Art direction | hero-döntés, kúráció, ritmus, editorial menü | kész |
+| 2. Responsive | 360/375/390/412/430/768/1024/1100/1180/1280/1366/1440/1920 | **0 px overflow mindenhol** |
+| 3. A11y + technika | kontrasztok 6,6–12:1, alt-ok, fókusz, lightbox, menü, sticky CTA | PASS |
+| 4. Final polish | kóstoló 1 hasáb, em-kontraszt, idézőjel-el, scan (TODO/debug/console) | tiszta |
+
+## V3 változtatások
+- Tipográfia: **Fraunces+Inter → Cormorant (display) + Jost (UI)**, teljes HU-glyph készlettel; kalibrált clamp-méretek; -171 KB font, +2 új preload
+- Hero: kompozíciós válasz a képbe égetett logóra (scrim-erősítés + object-position), mobil külön art-direction
+- Kúráció: galéria 11→6 kép (m-lead anchor portré-croppal), post-09–12 és bannerek kivezerve; szlogen-sáv törölve; kóstoló-grafikák törölve → tiszta tipográfiai blokk
+- Alkalom: 4 kártya → luxury editorial menü (sorszám + crossfade kép, keyboard: tabindex+focusin)
+- Különlegességek: pill-gombok → hairline sorszámozott editorial lista (01–05)
+- Copy: „Több mint” (vessző el), boraink-megjegyzés teljes kínálatra, Monor szöveg tényszerűbb, kóstolók nem aktív-organizációs hangzású
+- Alt: statement-kép helyesen „Parafadugók a Bormámor emblémájával…"
+- Gombok: pill → editorial 3px rect + link-CTA rendszer (hero/kapcsolat/tasting)
+- Kapcsolat: nagy Cormorant telefonszám, „Hívás most→” rect CTA, szöveges Útvonal/Facebook
+- Header: glass finomított (blur 10px, 60% alpha), mobil menü breakpoint 900→1180
+- Perf: teljes súly 677→**504 KB**, 12 kérés; JSON-LD url+abszolút image; preload-csökkentés
+- Takarítás: 12 unused asset törölve (852K→a repóban már csak használt fájlok)
+
+## Nem talált ki (tartalmi garancia változatlan)
+ár, készlet, pincészet, évjárat, eseménydátum, kedvezmény, webshop, szállítás, fizetés, értékelés: NINCS.
+Nyitvatartás: kizárólag Péntek 10–18, Szombat 9–14.
