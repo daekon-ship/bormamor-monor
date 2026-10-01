@@ -247,3 +247,32 @@ A képek most a történet ritmusában jelennek meg:
 | Technikai | scrollspy (Galéria aktív az interlude-on), lightbox nyit/zár, konzol 0, 390: docScrollW 380 (2 dísz-elem a hero clip-ben — ártalmatlan) | |
 
 Állapot: ÁTADHATÓ.
+
+
+---
+
+# V9 — INTERLUDE TELJES MEGSZÜNTETÉSE (Ügyfél-visszajelzés: "ez a galéria nem kell")
+
+## Döntés
+Az overlap képklasszter (fb-kollázs + palackos kártya + note) galéria-hangulatú maradt → TELJESEN törölve (HTML + CSS).
+Ezzel az oldalon NINCS külön képgyűjtő blokk: minden kép egy-egy szekció tartalmi része.
+
+## Képek végső eloszlása (6 db, mindegyik szekcióban, galéria nélkül)
+- statement: statement-kulcs 16/10
+- különlegességek: spirit-shelf 3/2
+- alkalom: 5 interaktív váltókép — ÚJ 4. sor: "Asztalterítéssel" → fb-kulcs-vizual (a kollázs itt kap természetes helyet)
+- kóstolók: post-13 márkakártya
+- Monor: dark-bottles háttér (mobil erős scrimmel)
+- (boraink: hover float-preview)
+
+## Nav
+"Galéria" menüpont eltávolítva (desktop + mobil); számozás 01–05-re igazítva.
+
+## Ellenőrzés (EXECUTED, cb=30/31)
+- interlude: 0 elem; nav: 5 link (desktop+mobilon); figcaption: 0
+- occ: 5 sor ↔ 5 kép szinkronban, 4. sor → fb-kulcs-vizual (desktop 4/3 + mobil 16/9, 280px)
+- 1440: docScrollW 1430 (1 dísz a hero clip-ben — ártalmatlan); 390: 380≤390
+- Konzol: 0 üzenet; mobil menü nyit/zár rendben
+- Kapcsolat + footer: vizuálisan egyensúlyban, NAP-adatok érintetlenek
+
+Állapot: ÁTADHATÓ — nincs külön galéria, a képek a történet részei.
