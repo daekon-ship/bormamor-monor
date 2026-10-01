@@ -159,3 +159,31 @@ A majdnem-portré konténer 57%-ra vágta le a landscape képeket. 4/3-mal mind 
 - occ menü képváltás (2. sor → post-13, @50% 42%) — PASS
 - Konzol: 0 üzenet; törött kép: 0
 - Vizuális képernyőképek: statement/specials/alkalom/galéria 1440 + 390 — minden téma épen látszik
+
+
+---
+
+# V6 FINAL VISUAL POLISH — 2026-10-01 (végső kör)
+
+## Változtatások
+1. **.occ-visual mobil visszaépítve** (korábban display:none — a 16 pontos prompt fő kritikája): 16/9, max-height 320px, teljes szélesség, order:2 (a lista után), border-radius 6px; aktív-sor váltásra mobilon is változik a kép (JS nem érintett). BUGFIX: az aspect-ratio + max-height a grid-sávot is felfújta (498px → valódi overflow 360px-en!) → `.occ-wrap > * { min-width: 0 }` + width:100% javítás (350 ≤ 360)
+2. **Tablet (≤1180):** occ-visual clamp(280px, 38vw, 420px) fix magassággal, hogy 2 oszlopnál se legyen túl magas
+3. **Galéria mobil:** m-lead `column-span: all` — a landscape lead-kép teljes szélességben vezeti a 2 oszlopos masonryt (sokkal prémiumabb ritmus)
+4. **Kóstolók desktop:** editorial split — heading balra (grid-row 1/span 3, függ. közép), tags+szöveg+CTA jobbra egymás alatt; a korábban üres jobb fél eltűnt; ≤1180 visszaáll egy oszlopra (grid-row reset)
+5. **Alacsony viewportok (1100–1920, max-height 830):** hero-title léptékelés 6.4vw-ig, meta-padding rövidítve → 1280×800: hero 0.88×vh (volt 1.01)
+
+## Végrehajtott ellenőrzések (EXECUTED)
+| Viewport | docScrollW | Eredmény |
+|---|---|---|
+| 360×740 | 350 ≤ 360 | PASS (occ-bugfix után) |
+| 390×780 | 380 ≤ 390 | PASS |
+| 430×860 | 420 ≤ 430 | PASS |
+| 768×1024 | 758 ≤ 768 | PASS (occ 292px, tastings 1 oszlop) |
+| 1024×768 | 1014 ≤ 1024 | PASS (occ 389px) |
+| 1280×800 | 1270 ≤ 1280 | PASS (hero 0.88×vh) |
+| 1440×900 | 1430 ≤ 1440 | PASS (hero 0.96×vh, cím 112px) |
+- Mobil occasion képváltás (4. sor → dark-bottles, 498→310px széles, 16/9): PASS
+- Mobil galéria: lead full-span + 2 oszlop: PASS (képernyőkép)
+- Kóstolók 1440 split + 768 egy oszlop: PASS (képernyőképek)
+- Konzol: 0 üzenet; hálózat: minden 200/304; törött kép: 0
+- 1280-as hero-magasság regresszió javítva (1.01 → 0.88)
