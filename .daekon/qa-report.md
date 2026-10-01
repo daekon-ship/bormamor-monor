@@ -219,4 +219,31 @@ A képek most a történet ritmusában jelennek meg:
 - 360: 350≤360 • 390: 390=390 • 768: 758≤768 (interlude 1 oszlop, small right-align) • 1440: klaszter + overlap vizuálisan igazolva
 - Monor mobil: .monor-media img object-position 30% 42% + scrim 0.95/0.93 — szöveg 100%-ban olvasható (képernyőkép)
 - Lightbox dark-bottles az interlude-ból: PASS; konzol: 0 üzenet
-- Nav aktív állapot (Galéria) az interlude-on: PASS (képernyőkép)
+- Nav aktív állapot (Galéria) az interlude-on: PASS (képernyőképek)
+
+
+---
+
+# V8 ÁTADÁSI VÉGIGFUTÁS — 2026-10-01
+
+## Változtatások
+1. Container 1240→1280 (wide 1440→1480) — szélesebb, nagyvárosi ügynökségi margók
+2. hero-sub: 44ch→40ch, line-height 1.7 — szűkebb, elegánsabb szövegtömb
+3. Interlude mobil: overlap-kártya finomítva (−2.4rem felül, 58% szélesség) — a kollázs alsó sávja kevésbé takart
+4. (V7-ből itt igazolva:) mobil Monor-scrim, tastings-visual, interlude elrendezés
+
+## Átellenőrzés (EXECUTED, cb=20–24 cache-bust)
+| Szekció | 1440 | 390 |
+|---|---|---|
+| Hero | kompozíció + meta-sáv rendben | 100svh, teljes széles CTA, Most zárva jelző rendben |
+| Statement | 16/10 lockup, cinematic | teljes lockup |
+| Különlegességek | 3/2 crop + lista egyensú | rendben |
+| Alkalom | 4/3 vizuál + aktív csík | kép a lista után, 16/9 |
+| Kóstolók | post-13 kártya + split | kártya 340px 16/10, tag-ek, CTA |
+| Interlude | klaszter + overlap + note | kártya átfedés javítva, note tiszta |
+| Monor | mask-reveal + háttér | 0.95 scrim — felirat nem zavar |
+| Kapcsolat | térkép + adatok | térkép felül, nagy telefon |
+| Footer | 3 oszlop | középre zárt, tiszta |
+| Technikai | scrollspy (Galéria aktív az interlude-on), lightbox nyit/zár, konzol 0, 390: docScrollW 380 (2 dísz-elem a hero clip-ben — ártalmatlan) | |
+
+Állapot: ÁTADHATÓ.
