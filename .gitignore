@@ -1,0 +1,7 @@
+# Munkafájlok
+_brandwork/
+*.log
+
+# Rendszer
+.DS_Store
+Thumbs.db

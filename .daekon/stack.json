@@ -1,0 +1,30 @@
+{
+  "version": 13,
+  "profile": ["brochure-leadgen"],
+  "activatedSkills": [
+    "daekon-stack-router",
+    "daekon-hero-composition",
+    "daekon-editorial-layout",
+    "daekon-anti-ai-aesthetic",
+    "daekon-anti-carditis",
+    "daekon-premium-motion",
+    "daekon-mobile-visual-system",
+    "daekon-image-cropping",
+    "daekon-media-art-direction",
+    "daekon-signature-moments",
+    "daekon-whitespace-rhythm",
+    "daekon-type-pairing",
+    "daekon-hungarian-content-rendering",
+    "daekon-quality-gate"
+  ],
+  "packagesAdded": [],
+  "externalServices": [],
+  "decisions": [
+    "Zero-framework static site (semantic HTML + CSS + vanilla JS): fastest LCP, free hosting, no build step needed for a one-page brochure site",
+    "Self-hosted variable fonts (Fraunces serif display, Inter sans) with preload to avoid layout shift and third-party requests",
+    "All imagery converted to WebP with art-directed crops from client originals only",
+    "Client logo rendered from official vector PDF (bomamor_logo_final.pdf) to transparent PNG; no fantasy logo invented",
+    "Motion: IntersectionObserver reveals + lightweight rAF parallax, prefers-reduced-motion respected, no animation libraries needed",
+    "Google Maps embed via search query for Kiss Ernő utca 9, Monor; tel:/mailto:/Facebook links as conversion paths"
+  ]
+}

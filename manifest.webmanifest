@@ -1,0 +1,14 @@
+{
+  "name": "Bormámor Monor Borkereskedés",
+  "short_name": "Bormámor",
+  "description": "Monori borok, válogatott italok és különlegességek Monor szívében.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#160D0F",
+  "theme_color": "#160D0F",
+  "lang": "hu",
+  "icons": [
+    { "src": "assets/img/logos/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/logos/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
