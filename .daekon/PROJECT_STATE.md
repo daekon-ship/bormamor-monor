@@ -47,6 +47,7 @@ Teljes prémium one-page weboldal a Bormámor Monor Borkereskedés számára, az
 - [x] V4 végső prémium kör: KÉP NÉLKÜLI tipográfiai hero (kulcslyuk+pohár vonal-védjegy díszként), logó specimen-hiba (GOTHAM LIGHT) javítva PDF-vektorokból, copy-hibák (vesszők, kóstolók), mask-reveal Monor blokk, [hidden]/z-index mobilmenü-bugfix, mask-descender fix, noscript fallback fix, 5 kurált galéria-kép, hero-pince teljes kivonása, ~678 KB
 - [x] V5 teljes kép-audit + final polish: minden crop vizuálisan igazolva (crop-teszt oldal), m-lead 3/4→16/9, statement 16/10, specials 3/2, occ-visual 4/4.6→4/3 + képenkénti object-position, galéria természetes arányokon, float-preview pozíciók javítva
 - [x] V6 final visual polish: occ-visual mobilon VISSZA (16/9, max-height, szinkron képváltás) + grid min-width bugfix (valódi 360px overflow megszüntetve), galéria mobil full-width lead, kóstolók editorial split, alacsony viewport hero-léptékelés (1280×800: 0.88×vh), 7 viewport overflow-PASS
+- [x] V7 editorial képszerkezet: masonry-galéria megszűnt → képek szétosztva a ritmusban (kóstoló: post-13 márkakártya; kapcsolat előtt: fb-kollázs + dark-bottles overlap klaszter); caption-dobozok eltűntek; Monor mobil-scrim javítva (0.95); lightbox mindenhova megmaradt
 - [ ] Egyedi domain (ha a megrendelő hoz) — DNS + CNAME + og:url frissítés
 
 ## Auditálás közben javított hibák

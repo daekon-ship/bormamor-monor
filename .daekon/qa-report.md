@@ -187,3 +187,36 @@ A majdnem-portré konténer 57%-ra vágta le a landscape képeket. 4/3-mal mind 
 - Kóstolók 1440 split + 768 egy oszlop: PASS (képernyőképek)
 - Konzol: 0 üzenet; hálózat: minden 200/304; törött kép: 0
 - 1280-as hero-magasság regresszió javítva (1.01 → 0.88)
+
+
+---
+
+# V7 — GALÉRIA FEGYVERLEÁSZTATÁSA, EDITORIAL SZÉTOSZTÁS — 2026-10-01
+
+## Koncepcióváltás
+A külön masonry-galéria blokk megszűnt (a 8. prompt kritikája: "ne nézzen ki külön galériának").
+A képek most a történet ritmusában jelennek meg:
+- statement: 1 erős nagy kép (16/10 lockup) — maradt
+- boraink: hover float-preview — maradt
+- különlegességek: 1 nagy detail-kép (3/2), caption-doboz ELTÁVOLÍTVA — maradt caption nélkül
+- alkalom: interaktív képváltás (desktop 4/3, mobil 16/9 max-height 320) — maradt
+- kóstolók: ÚJ post-13 márkakártya a bal oldali oszlopban (1/1.15, mobil 16/10 max-340)
+- Monor: háttérkép mobilon erős scrimmel (0.93–0.95) — a BORMÁMOR felirat már nem ütközik a szöveggel
+- Kapcsolat ELŐTT: ÚJ interlude képklasszter (#galeria): fb-kollázs 16/10.5 nagyban +
+  dark-bottles 4/3 overlap-kártya paper kerettel + egy visszafogott uppercase note
+  ("A Bormámor világa — az asztaltól a palackig.") — NEM külön caption-dobozok
+
+## Eltávolítva
+- .masonry / .m-item / .m-lead struktúra és stílusok (caption-dobozokkal együtt)
+- Minden figcaption a képekről (a lightbox aria-label hordozza az azonosítást)
+
+## Megmaradt működés
+- Lightbox: az interlude 2 képe és a kóstoló márkakártya is nyitja (m-btn), lapozás/ESC/swipe érintetlen
+- Scrollspy "Galéria" nav-pont az interlude-ra mutat (#galeria megmaradt)
+- img-reveal animációk az új figurákon
+
+## Ellenőrzések (EXECUTED)
+- 360: 350≤360 • 390: 390=390 • 768: 758≤768 (interlude 1 oszlop, small right-align) • 1440: klaszter + overlap vizuálisan igazolva
+- Monor mobil: .monor-media img object-position 30% 42% + scrim 0.95/0.93 — szöveg 100%-ban olvasható (képernyőkép)
+- Lightbox dark-bottles az interlude-ból: PASS; konzol: 0 üzenet
+- Nav aktív állapot (Galéria) az interlude-on: PASS (képernyőkép)

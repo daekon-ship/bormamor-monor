@@ -712,16 +712,23 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   grid-template-columns: minmax(0, 1fr);
   padding-bottom: clamp(4.5rem, 9vw, 7rem);
 }
-/* Editorial split: heading balra (függ. közép), tartalom jobbra tömör sorrendben */
+/* Editorial split: márkakártya balra, heading+content jobbra */
 .tastings-copy {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1.4rem clamp(2.5rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 2rem clamp(2.5rem, 6vw, 6rem);
 }
-.tastings-copy .section-head { grid-column: 1; grid-row: 1 / span 3; align-self: center; margin: 0; }
-.tastings-copy > .tasting-tags { grid-column: 2; grid-row: 1; align-self: start; margin: .6rem 0 0; }
-.tastings-copy > p { grid-column: 2; grid-row: 2; margin: 0 0 2rem; }
-.tastings-copy > .tastings-cta { grid-column: 2; grid-row: 3; }
+.tastings-visual { margin: 0; grid-column: 1; grid-row: 1 / span 3; align-self: center; }
+.tastings-visual .m-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; overflow: clip; border-radius: 4px; }
+.tastings-visual img {
+  width: 100%; aspect-ratio: 1 / 1.15; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.tastings-visual .m-btn:hover img { transform: scale(1.035); }
+.tastings-copy .section-head { grid-column: 2; grid-row: 1; align-self: center; margin: 0; }
+.tastings-copy > .tasting-tags { grid-column: 2; grid-row: 2; align-self: start; margin: .6rem 0 0; }
+.tastings-copy > p { grid-column: 2; grid-row: 3; margin: 0 0 2rem; }
+.tastings-copy > .tastings-cta { grid-column: 2; grid-row: 4; }
 .tastings-copy p {
   color: var(--ink-soft); max-width: 54ch; margin: 0 0 1.9rem;
 }
@@ -754,17 +761,36 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 
 /* ============================================================
-   GALÉRIA — masonry
+   INTERLUDE — editorial képklasszter a Monor után
    ============================================================ */
-.gallery { padding-block: clamp(5.5rem, 11vw, 10rem); }
-.masonry {
-  columns: 3 300px;
-  column-gap: 1.1rem;
+.interlude {
+  padding-block: clamp(5rem, 10vw, 9rem);
+  overflow: clip;
 }
-.m-item {
-  margin: 0 0 1.1rem;
-  break-inside: avoid;
-  position: relative;
+.interlude-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  align-items: end;
+}
+.interlude-big { margin: 0; position: relative; }
+.interlude-big .m-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; overflow: clip; border-radius: 4px; }
+.interlude-big img {
+  width: 100%; aspect-ratio: 16 / 10.5; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.interlude-big .m-btn:hover img { transform: scale(1.035); }
+.interlude-small { margin: 0 0 0 clamp(-6.5rem, -6vw, -2rem); position: relative; z-index: 2; box-shadow: 0 30px 80px -30px rgba(18,9,11,.55); }
+.interlude-small .m-btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; overflow: clip; border: 6px solid var(--paper); border-radius: 4px; }
+.interlude-small img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+.interlude-small .m-btn:hover img { transform: scale(1.04); }
+.interlude-note {
+  grid-column: 1 / -1;
+  margin: 1.4rem 0 0;
+  font-size: .84rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--bronze-text);
 }
 
 /* ---------- Lightbox ---------- */
@@ -956,14 +982,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .kd-line:last-child { transform: scaleX(-1); }
 
 
-/* --- Galéria figure + felirat + gomb --- */
-.m-item { border-radius: 6px; background: #fff; box-shadow: 0 1px 0 rgba(42,18,22,.06); }
-.m-item .m-btn {
-  display: block; width: 100%; padding: 0; border: 0; background: none;
-  cursor: zoom-in; border-radius: 6px 6px 0 0; overflow: clip; position: relative;
-}
-.m-item .m-btn img { width: 100%; transition: transform .8s var(--ease-out); }
-.m-item .m-btn::after {
+/* --- Lightbox gomb (közös a képklasszterekhez) --- */
+.m-btn { position: relative; }
+.m-btn::after {
   content: "⤢";
   position: absolute; right: .6rem; bottom: .55rem;
   width: 32px; height: 32px; display: grid; place-items: center;
@@ -972,18 +993,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   opacity: 0; transform: translateY(6px);
   transition: opacity .3s, transform .3s var(--ease-out);
   backdrop-filter: blur(4px);
+  pointer-events: none;
 }
-.m-item .m-btn:hover::after, .m-item .m-btn:focus-visible::after { opacity: 1; transform: none; }
-.m-item .m-btn:hover img { transform: scale(1.04); }
-.m-item figcaption {
-  padding: .6rem .75rem .68rem;
-  font-size: .78rem; color: var(--ink-soft);
-  text-align: left;
-}
-
-/* --- Galéria anchor kép (landscape, természetes tartalomhoz igazítva) --- */
-.m-lead .m-btn img { aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 50%; }
-.m-lead figcaption { font-size: .82rem; }
+.m-btn:hover::after, .m-btn:focus-visible::after { opacity: 1; transform: none; }
 
 /* --- Kóstoló tag-ek --- */
 .tasting-tags {
@@ -1052,10 +1064,15 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
     grid-template-columns: 1fr;
   }
   .tastings-copy { grid-template-columns: 1fr; }
+  .tastings-visual { grid-column: auto; grid-row: auto; max-width: 340px; margin-bottom: 1.6rem; }
+  .tastings-visual img { aspect-ratio: 16 / 10; }
   .tastings-copy .section-head { grid-column: auto; grid-row: auto; }
   .tastings-copy > .tasting-tags { grid-column: auto; grid-row: auto; }
   .tastings-copy > p { grid-column: auto; grid-row: auto; }
   .tastings-copy > .tastings-cta { grid-column: auto; grid-row: auto; }
+  .interlude-wrap { grid-template-columns: 1fr; }
+  .interlude-small { margin: -3rem 1.4rem 0 auto; width: min(62%, 240px); }
+  .interlude-note { margin-top: 1rem; }
   .occ-visual { max-height: 420px; aspect-ratio: auto; height: clamp(280px, 38vw, 420px); }
   .statement-figure { order: -1; }
   .statement-figure img { aspect-ratio: 16/9; }
@@ -1091,6 +1108,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   .wine-row { padding-inline: .2rem; }
   .wine-name { font-size: 1.45rem; }
 
+  /* Mobilon a háttérkép felirata nem versenyezhet a szöveggel */
+  .monor-media img { object-position: 30% 42%; }
+  .monor-scrim {
+    background: linear-gradient(180deg, rgba(14,7,9,.95), rgba(12,6,8,.93));
+  }
   .masonry { columns: 2 140px; column-gap: .7rem; }
   .m-item { margin-bottom: .7rem; }
   /* A lead-kép mobilon teljes szélességben vezeti a galériát */
