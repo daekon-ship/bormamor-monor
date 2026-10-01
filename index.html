@@ -29,10 +29,7 @@
   <link rel="preload" href="assets/fonts/cormorant-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <noscript><style>.reveal,.hero-anim{opacity:1 !important;transform:none !important;animation:none !important}.img-reveal::after{display:none}.img-reveal img{transform:none}.mobile-menu{display:none}</style></noscript>
-
-  <!-- LCP image preload -->
-  <link rel="preload" as="image" href="assets/img/hero-pince.webp" fetchpriority="high">
+  <noscript><style>.reveal,.hero-anim{opacity:1 !important;transform:none !important;animation:none !important}.img-reveal::after{display:none}.img-reveal img{transform:none}.mask-reveal .m-line>span{opacity:1 !important;transform:none !important;transition:none !important}.mobile-menu{display:none}</style></noscript>
 
   <script type="application/ld+json">
   {
@@ -65,7 +62,7 @@
 <header class="site-header" data-header>
   <div class="header-inner container-wide">
     <a href="#top" class="brand" aria-label="Bormámor Monor — kezdőlap">
-      <img src="assets/img/logos/bormamor-logo-light.webp" alt="Bormámor Monor Borkereskedés" width="1000" height="301" class="brand-logo">
+      <img src="assets/img/logos/bormamor-logo-light.webp" alt="Bormámor Monor Borkereskedés" width="1400" height="327" class="brand-logo">
     </a>
 
     <nav class="site-nav" aria-label="Fő navigáció">
@@ -100,40 +97,50 @@
   </nav>
   <div class="mobile-menu-foot">
     <a href="tel:+36203830016">+36 20 383 0016</a>
-    <a href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook</a>
+    <a href="https://www.facebook.com/bormamormonor/" target="_blank" rel="noopener">Facebook</a>
     <p>Kiss Ernő utca 9. • Monor</p>
   </div>
 </div>
 
 <main id="main">
 
-  <!-- ================= HERO ================= -->
+  <!-- ================= HERO — kép nélküli, tipográfiai editorial ================= -->
   <section class="hero" id="top" aria-label="Bormámor Monor bemutatása">
-    <div class="hero-media" data-parallax aria-hidden="true">
-      <img src="assets/img/hero-pince.webp" alt="" width="1640" height="720" fetchpriority="high" decoding="async">
+    <div class="hero-deco" aria-hidden="true">
+      <span class="hd-line hd-line-a"></span>
+      <span class="hd-line hd-line-b"></span>
+      <span class="hd-arc"></span>
+      <svg class="hd-key" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="8.6" r="6.1" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        <path d="M9.1 13.6C8.5 16.8 7.6 19.2 7 21.6H17C16.4 19.2 15.5 16.8 14.9 13.6" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+        <path d="M9.9 4.9h4.2c0 2.5-1 4-2.1 4.5-1.1-.5-2.1-2-2.1-4.5Z" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+        <path d="M12 9.4v5.2M10.6 14.6h2.8" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+      </svg>
     </div>
-    <div class="hero-scrim" aria-hidden="true"></div>
-
     <div class="hero-frame" aria-hidden="true"></div>
-    <p class="hero-side" aria-hidden="true">MONORI BOROK · HELYI ÉRTÉKEK · PRÉMIUM ÉLMÉNY</p>
+    <p class="hero-side" aria-hidden="true">Kulcs a minőséghez</p>
 
     <div class="hero-content container">
-      <p class="eyebrow eyebrow-hero hero-anim" style="--d:.15s">Bormámor <span class="dot">•</span> Monor</p>
+      <p class="eyebrow eyebrow-hero hero-anim" style="--d:.15s">Monori borok · Helyi értékek · Prémium élmény</p>
       <h1 class="hero-title">
         <span class="line hero-anim" style="--d:.3s"><span>A monori borok.</span></span>
         <span class="line hero-anim" style="--d:.45s"><span>Egy <em>helyen.</em></span></span>
-        <span class="line line-tail hero-anim" style="--d:.6s"><span>Egy jó történettel.</span></span>
+        <span class="line line-tail hero-anim" style="--d:.6s"><span><span class="tail-rule" aria-hidden="true"></span>Egy jó történettel.</span></span>
       </h1>
       <p class="hero-sub hero-anim" style="--d:.78s">Válogatott helyi borok, különleges tételek és személyes ajánlás Monor szívében.</p>
       <div class="hero-cta hero-anim" style="--d:.92s">
         <a class="btn btn-primary magnetic" href="#boraink">Fedezd fel a Bormámort<span class="btn-arrow" aria-hidden="true">→</span></a>
         <a class="link-cta magnetic" href="https://www.google.com/maps/dir/?api=1&amp;destination=Borm%C3%A1mor+Monor+Borkeresked%C3%A9s%2C+2200+Monor%2C+Kiss+Ern%C5%91+utca+9" rel="noopener">Útvonaltervezés<span class="btn-arrow" aria-hidden="true">→</span></a>
       </div>
-      <p class="hero-addr hero-anim" style="--d:1.05s">
+    </div>
+
+    <div class="hero-meta container hero-anim" style="--d:1.08s">
+      <p class="hero-addr">
         <svg class="key-mini" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 12h10M17 12v4M20.5 12v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        Kiss Ernő utca 9. • Monor
+        Kiss Ernő utca 9. <span aria-hidden="true">•</span> Monor
         <span class="open-now" data-open-now></span>
       </p>
+      <p class="hero-brandmark">Bormámor <span aria-hidden="true">•</span> Monor</p>
     </div>
 
     <a class="hero-scroll hero-anim" style="--d:1.2s" href="#bormamor" aria-label="Görgess lejjebb"><span aria-hidden="true"></span></a>
@@ -222,11 +229,11 @@
         </header>
         <p class="reveal" style="--d:.1s">A kínálatban időszakosan megtalálhatók:</p>
         <ol class="specials-list reveal" style="--d:.16s">
-          <li><span class="sl-name">Minőségi magyar borok</span><span class="sl-sec">pezsgők</span></li>
-          <li><span class="sl-name">Kézműves sörök</span><span class="sl-sec">pálinkák</span></li>
-          <li><span class="sl-name">Prémium whisky</span><span class="sl-sec">gin</span></li>
-          <li><span class="sl-name">Rum</span><span class="sl-sec">konyak</span></li>
-          <li><span class="sl-name">Helyi és kézműves gasztronómiai különlegességek</span></li>
+          <li>Minőségi magyar borok, pezsgők</li>
+          <li>Kézműves sörök, pálinkák</li>
+          <li>Prémium whisky, gin</li>
+          <li>Rum, konyak</li>
+          <li>Helyi és kézműves gasztronómiai különlegességek</li>
         </ol>
         <p class="specials-note reveal" style="--d:.22s">A készlet időnként változik — válogatott különlegességekért érdeklődj üzletünkben.</p>
         <div class="specials-cta reveal" style="--d:.28s">
@@ -234,8 +241,8 @@
         </div>
       </div>
       <figure class="specials-figure img-reveal reveal" style="--d:.2s">
-        <img src="assets/img/hero-pince.webp" alt="A Bormámor üzletbejárata és a jól felszerelt italpolc" width="1640" height="720" loading="lazy" decoding="async">
-        <figcaption>Kiss Ernő utca 9. — a polcokon mindig van miért bentmaradni.</figcaption>
+        <img src="assets/img/spirit-shelf.webp" alt="Dugóhúzó és Bormámor-emblémás parafadugók meleg fényben" width="1640" height="720" loading="lazy" decoding="async">
+        <figcaption>Kézműves válogatásunk részlete — amiért érdemes beugrani.</figcaption>
       </figure>
     </div>
   </section>
@@ -288,8 +295,8 @@
       </div>
 
       <div class="occasion-cta reveal">
-        <p class="occasion-cta-line">Nem tudod, melyik a te alkalomod?</p>
-        <a class="btn btn-primary btn-lg magnetic" href="tel:+36203830016">Segítünk választani — Hívás</a>
+        <p class="occasion-cta-line">Nem tudod, melyik a te alkalomod? Személyesen segítünk választani.</p>
+        <a class="btn btn-primary btn-lg magnetic" href="tel:+36203830016">Hívás: +36 20 383 0016<span class="btn-arrow" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -310,12 +317,12 @@
           <li>gasztronómiai programok</li>
         </ul>
         <p class="reveal" style="--d:.1s">
-          Kóstolók és gasztronómiai programok időszakosan, változó témákkal rendezünk.
-          A következő alkalom időpontját mindig a Facebook-oldalunkon jelenítjük meg.
+          Időszakosan kóstolókat és gasztronómiai programokat rendezünk, mindig változó témákkal.
+          A következő alkalom időpontját a Facebook-oldalunkon jelentjük be.
         </p>
         <div class="tastings-cta reveal" style="--d:.18s">
           <a class="btn btn-primary magnetic" href="tel:+36203830016">Érdeklődöm a következő alkalomról</a>
-          <a class="link-cta magnetic" href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook-programok<span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="link-cta magnetic" href="https://www.facebook.com/bormamormonor/" target="_blank" rel="noopener">Facebook-programok<span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
@@ -329,8 +336,11 @@
     </div>
     <div class="monor-scrim" aria-hidden="true"></div>
     <div class="container monor-content">
-      <p class="eyebrow reveal">Monori Pincefalu</p>
-      <h2 class="display display-xl reveal" style="--d:.1s">Monor íze.<br>Monor története.</h2>
+      <p class="eyebrow eyebrow-hero reveal">Monori Pincefalu</p>
+      <h2 class="display display-xl monor-title mask-reveal">
+        <span class="m-line"><span>Monor íze.</span></span>
+        <span class="m-line"><span style="--d:.14s">Monor <em>története.</em></span></span>
+      </h2>
       <p class="monor-body reveal" style="--d:.2s">
         Monoron a bor és a pincekultúra régóta a helyi élet része: a Pincefalu pincesorai,
         a környék pincészetei és az itt élők vendégszeretete nélkül nem lenne miből válogatnunk.
@@ -349,10 +359,10 @@
       </header>
       <div class="masonry">
         <figure class="m-item reveal m-lead" style="--d:.02s">
-            <button class="m-btn" data-lb="assets/img/hero-pince.webp" aria-label="Nagyítás: Pincehangulat — a Bormámor kínálata">
-              <img src="assets/img/hero-pince.webp" alt="Pincehangulat a Bormámor kínálatából" width="1640" height="720" loading="lazy" decoding="async" style="object-position:62% 40%">
+            <button class="m-btn" data-lb="assets/img/dark-bottles.webp" aria-label="Nagyítás: Sötét palackok, csendes fény">
+              <img src="assets/img/dark-bottles.webp" alt="Sötét palackok csendes fényben" width="1640" height="720" loading="lazy" decoding="async" style="object-position:50% 45%">
             </button>
-            <figcaption>Pincehangulat — a Bormámor kínálata</figcaption>
+            <figcaption>Sötét palackok, csendes fény</figcaption>
           </figure>
         
         <figure class="m-item reveal" style="--d:.08s">
@@ -368,10 +378,10 @@
             <figcaption>Kulcs a minőséghez</figcaption>
           </figure>
         <figure class="m-item reveal" style="--d:.14s">
-            <button class="m-btn" data-lb="assets/img/spirit-shelf.webp" aria-label="Nagyítás: Különlegességek a polcról">
-              <img src="assets/img/spirit-shelf.webp" alt="Italpolc meleg fényben" width="1640" height="720" loading="lazy" decoding="async">
+            <button class="m-btn" data-lb="assets/img/spirit-shelf.webp" aria-label="Nagyítás: Kézműves részletek">
+              <img src="assets/img/spirit-shelf.webp" alt="Dugóhúzó és parafadugók meleg fényben" width="1640" height="720" loading="lazy" decoding="async" style="object-position:55% 55%">
             </button>
-            <figcaption>Különlegességek a polcról</figcaption>
+            <figcaption>Kézműves részletek</figcaption>
           </figure>
         <figure class="m-item reveal" style="--d:.17s">
             <button class="m-btn" data-lb="assets/img/fb-kulcs-vizual.webp" aria-label="Nagyítás: Asztalterítés a Bormámor vizuáljával">
@@ -380,12 +390,7 @@
             <figcaption>Asztalterítés a Bormámor vizuáljával</figcaption>
           </figure>
         
-        <figure class="m-item reveal" style="--d:.23s">
-            <button class="m-btn" data-lb="assets/img/dark-bottles.webp" aria-label="Nagyítás: Sötét palackok, csendes fény">
-              <img src="assets/img/dark-bottles.webp" alt="Sötét palackok csendes fényben" width="1640" height="720" loading="lazy" decoding="async">
-            </button>
-            <figcaption>Sötét palackok, csendes fény</figcaption>
-          </figure>
+
         
         
         
@@ -406,7 +411,7 @@
         <dl class="contact-list reveal" style="--d:.1s">
           <div><dt>Cím</dt><dd>2200 Monor, Kiss Ernő utca 9.</dd></div>
           <div><dt>E-mail</dt><dd><a href="mailto:bormamormonor@gmail.com">bormamormonor@gmail.com</a></dd></div>
-          <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/bormamormonor/" rel="noopener">Bormámor Monor</a></dd></div>
+          <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/bormamormonor/" target="_blank" rel="noopener">Bormámor Monor</a></dd></div>
           <div class="hours">
             <dt>Nyitvatartás</dt>
             <dd>
@@ -420,7 +425,7 @@
         <div class="contact-cta reveal" style="--d:.2s">
           <a class="btn btn-primary magnetic" href="tel:+36203830016">Hívás most<span class="btn-arrow" aria-hidden="true">→</span></a>
           <a class="link-cta magnetic" href="https://www.google.com/maps/dir/?api=1&amp;destination=Borm%C3%A1mor+Monor+Borkeresked%C3%A9s%2C+2200+Monor%2C+Kiss+Ern%C5%91+utca+9" rel="noopener">Útvonaltervezés<span class="btn-arrow" aria-hidden="true">→</span></a>
-          <a class="link-cta magnetic" href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook<span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="link-cta magnetic" href="https://www.facebook.com/bormamormonor/" target="_blank" rel="noopener">Facebook<span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -438,7 +443,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-col-brand">
-      <img class="footer-logo" src="assets/img/logos/bormamor-logo-light.webp" alt="Bormámor Monor Borkereskedés" width="1000" height="301" loading="lazy">
+      <img class="footer-logo" src="assets/img/logos/bormamor-logo-light.webp" alt="Bormámor Monor Borkereskedés" width="1400" height="327" loading="lazy">
       <p class="footer-tag">„Kulcs a minőséghez”</p>
     </div>
     <div class="footer-col">
@@ -450,7 +455,7 @@
       <h3>Kapcsolat</h3>
       <p><a href="tel:+36203830016">+36 20 383 0016</a></p>
       <p><a href="mailto:bormamormonor@gmail.com">bormamormonor@gmail.com</a></p>
-      <p><a href="https://www.facebook.com/bormamormonor/" rel="noopener">Facebook — Bormámor Monor</a></p>
+      <p><a href="https://www.facebook.com/bormamormonor/" target="_blank" rel="noopener">Facebook — Bormámor Monor</a></p>
     </div>
   </div>
   <div class="container footer-base">

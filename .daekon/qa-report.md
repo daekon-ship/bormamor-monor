@@ -70,3 +70,52 @@ Dátum: 2026-10-01 • Build: statikus (index.html + style.css + main.js + asset
 ## Nem talált ki (tartalmi garancia változatlan)
 ár, készlet, pincészet, évjárat, eseménydátum, kedvezmény, webshop, szállítás, fizetés, értékelés: NINCS.
 Nyitvatartás: kizárólag Péntek 10–18, Szombat 9–14.
+
+
+---
+
+# V4 VÉGSŐ PRÉMIUM JAVÍTÓ KÖR — 2026-10-01 (16 pontos mester-prompt)
+
+## Kép nélküli hero (tudatos design döntés — NEM került be helyette fotó)
+- hero-pince.webp TELJES kivezetése: hero + specials figure + galéria m-lead + preload törölve; asset fájl is törölve
+- Új tipográfiai editorial hero: eyebrow „Monori borok · Helyi értékek · Prémium élmény”, 3 soros H1 (line-mask animációval), sub, CTA-pár, meta-sáv (cím + Most nyitva/zárva + Bormámor•Monor márka-jel), függő „Kulcs a minőséghez” oldalszöveg, CSS-only dekoráció (hairline-ok, kör-ívek, kulcslyuk+pohár vonal-védjegy — a márkajel vonalas interpretációja, NEM fotó), grain
+- Méret: 88svh desktop (mért 0,88–0,97 vh-arány), mobil külön art-direction (100svh)
+
+## Asset-hiba javítás: GOTHAM LIGHT specimen
+- A header/footer logó webp-be beégett a brandbook 5. oldalának betűtípus-specimen sávja
+- Újraépítés az ügyfél bomamor_logo_final.pdf 1. oldalának vektor-sávjaiból (PyMuPDF 4x render): BORMÁMOR + sorkizárt BORKERESKEDÉS, cream + sötét variáns; width/height attr frissítve 1400×327
+- Régi törlések: bormamor-logo-light.png (specimen-es), key-white.png, bormamor-logo-dark.webp (nem hivatkozott)
+
+## Copy + tartalom (tényszerűség megőrizve)
+- „Nem csak bor” lista vessző-hibái javítva (Minőségi magyar borok, pezsgők / Kézműves sörök, pálinkák / …)
+- Kóstolók: „Időszakosan kóstolókat és gasztronómiai programokat rendezünk, mindig változó témákkal. A következő alkalom időpontját a Facebook-oldalunkon jelentjük be.”
+- Alkalom-CTA: „Nem tudod, melyik a te alkalomod? Személyesen segítünk választani.” + „Hívás: +36 20 383 0016” gomb
+- Monor blokk: mask-reveal címek (Monor íze. / Monor *története.*), nagyobb display-xl, kibővített scrim
+- Galéria: 6→5 kurált kép (m-lead dark-bottles 3/4), spirit-shelf alt/caption igazítva a valódi tartalomhoz, FB linkek target=_blank
+
+## BUGFIX (komoly)
+1. Mobil menü: [hidden] attribútumot felülírta a .mobile-menu{display:flex} → láthatatlan overlay blokkolta a kattintásokat; + header z-index 100→125 (X gomb elérhető) → .mobile-menu[hidden]{display:none}
+2. Mask-sorok kurzív leszállóit (g/y/j) levágta az overflow:hidden → padding-bottom+.12em / margin-bottom -.12em kompenzáció (hero + monor)
+3. noscript fallback nem állította vissza a mask-reveal opacity-t → Monor-cím JS nélkül láthatatlan lett volna → javítva
+4. reduced-motion blokkban a .hero-deco display:none (a statikus dekoráció nem animáció) → eltávolítva, scrollhint csak opacitásra
+
+## Végrehajtott ellenőrzések (EXECUTED)
+| Ellenőrzés | Módszer | Eredmény |
+|---|---|---|
+| Overflow-mátrix | document.scrollWidth vs innerWidth: 320/360/375/390/412/430/768/1024/1181/1366/1440/1920 | **PASS — 0 valódi overflow mindenhol** (scrollWidth mindig < vw; a .hd-* díszeket a hero overflow:clip vágja) |
+| Hero arány | mért magasság/vh | 1920×1080: 0,88 • 1440×900: 0,95 • 1181×800: 0,97 — mind ≥80vh |
+| H1/mask vágás | scrollHeight vs clientHeight soronként | **PASS — 0 vágott leszálló** a javítás után |
+| Egy H1 / dup ID / törött kép | DOM-számolás | PASS — 1 H1, 0 duplikátum, 0 broken img |
+| JSON-LD | JSON.parse | PASS — LiquorStore, abszolút url/image |
+| Linkek | DOM-számolás | PASS — 8 tel, 2 mailto, 5 FB (_blank), 4 maps; nyitvatartás-szöveg változatlan |
+| Lightbox | programozott nyit/next/close + alt/caption ellenőrzés | PASS |
+| Mobil menü | nyit → X-katt hit-test → zár; body scroll-lock; aria | PASS (a [hidden] fix után) |
+| Konzol / hálózat | preview_logs | PASS — 0 console üzenet, minden erőforrás 200, hero-pince már nem töltődik |
+| Képméret/CLS | width/height attr + parent aspect-ratio minden layout-képen | PASS |
+| Súly | fájl-mérés | ~678 KB statikus összesen (a korábbi 801 KB-ról: unused logo-PNG/key-white/hero-pince törölve) |
+| Vizuális | 10+ élő screenshot 1440/1920/390 | PASS — hero/statement/boraink/különlegességek/alkalom/kóstolók/monor/galéria/kapcsolat/footer átnézve |
+
+## NOT VERIFIED / N/A
+- Élő készüléken való swipe-teszt (touch): a lightbox swipe-handler kód szinten jelen van, valós érintéssel NEM volt tesztelve.
+- Lighthouse: N/A (nincs build-toolchain; súly+CLS kézzel mérve).
+- Éles Pages ellenőrzés a push UTÁN történik (lásd PROJECT_STATE).

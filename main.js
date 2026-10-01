@@ -36,18 +36,11 @@
   onScroll();
 
   /* ---------- Parallax (finom, transform-only) ---------- */
-  const heroMedia = $('.hero-media');
-  const heroContent = $('.hero-content');
+  /* A hero tudatosan kép nélküli — itt nincs kép-parallax, csak a Monor blokk média-fátyolja. */
   const monorMedia = $('[data-parallax-slow]');
 
   function parallax(y) {
     const vh = innerHeight;
-    if (heroMedia) {
-      const p = Math.min(y / vh, 1);
-      heroMedia.style.transform = `translate3d(0, ${p * 7}%, 0)`;
-      if (heroContent && p < 1) heroContent.style.transform = `translate3d(0, ${p * -4}vh, 0)`;
-      heroContent && (heroContent.style.opacity = String(Math.max(0, 1 - p * 1.25)));
-    }
     if (monorMedia) {
       const r = monorMedia.parentElement.getBoundingClientRect();
       if (r.top < vh && r.bottom > 0) {
@@ -58,7 +51,7 @@
   }
 
   /* ---------- Scroll reveal ---------- */
-  const revealables = $$('.reveal, .img-reveal');
+  const revealables = $$('.reveal, .img-reveal, .mask-reveal');
   if ('IntersectionObserver' in window && !reducedMotion) {
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
