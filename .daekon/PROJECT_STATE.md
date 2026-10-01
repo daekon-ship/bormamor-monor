@@ -36,16 +36,14 @@ Teljes prémium one-page weboldal a Bormámor Monor Borkereskedés számára, az
 - Olív: csak nyomokban (elemek-07 zöldes tónusa)
 
 ## Státusz
-- [x] Projekt feltérképezés, asset review, pixel-elemzés
-- [x] DAEKON skillek betöltése, stack döntés (zero-framework static)
-- [x] Asset pipeline (WebP, cropok, logó, favicon, OG, fontok)
-- [x] index.html / style.css / main.js
-- [x] Audit körök (vizuális / responsive / technikai) + javítások
-- [x] QA report → .daekon/qa-report.md
-- [ ] Éles telepítés (ha a megrendelő kéri) + og:url pótlása domain ismeretében
-
-## Következő lépés
-Telepítés a megrendelő tárhelyére; az oldal a preview panelen megtekinthető (127.0.0.1:8613).
+- [x] Teljes build + audit + javítások (V1)
+- [x] V2 vizuális polish: hero editorial keret + függő oldalszöveg, kulcs-divider vonalakkal,
+      editorial sorszámok (01–06), nyitvatartás-jelző (Most nyitva/zárva), ónvessző-kompozíció,
+      pill-mentes különlegesség-lista, kóstoló tag-ek, nagy Fraunces telefonszám,
+      galéria figure+figcaption kártyákon, keyboard-focusable alkalmi tile-ok, editorial 3-oszlopos footer
+- [x] GitHub repo + Pages: https://daekon-ship.github.io/bormamor-monor/
+- [x] Éles füstteszt: HTTP 200, 0 törött kép, fontok OK, overflow 0
+- [ ] Egyedi domain (ha a megrendelő hoz) — DNS + CNAME + og:url frissítés
 
 ## Auditálás közben javított hibák
 1. Masonry-képek fix magassága (globális img height:auto hiánya) → javítva
