@@ -251,7 +251,12 @@
       for (const e of entries) {
         if (e.isIntersecting) {
           const id = '#' + e.target.id;
-          navLinks.forEach(a => a.classList.toggle('current', a.getAttribute('href') === id));
+          navLinks.forEach(a => {
+            const match = a.getAttribute('href') === id;
+            a.classList.toggle('current', match);
+            if (match) a.setAttribute('aria-current', 'true');
+            else a.removeAttribute('aria-current');
+          });
         }
       }
     }, { rootMargin: '-45% 0px -50% 0px' });

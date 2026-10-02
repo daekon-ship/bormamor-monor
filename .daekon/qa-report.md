@@ -311,3 +311,27 @@ Plusz: style.css/main.js verziózott URL (?v=10) — a Pages-cache elavult JS-pr
 - Üzleti tények érintetlenek: cím, telefon, e-mail, FB, Pé 10–18 / Szo 9–14 mindenhol helyesen
 
 Állapot: ÁTADHATÓ.
+
+
+---
+
+# V11 — CSISZOLÁSI KÖR (head/SEO + fejléc-telefon + a11y)
+
+## Fejlesztések
+1. Twitter-kártya meta (summary_large_image, title/desc/image) + og:image:alt
+2. robots.txt + sitemap.xml (egyoldalas sitemap, lastmod 2026-10-02)
+3. preconnect a Google Maps embed domainjeihez (gyorsabb kapcsolat betöltés)
+4. Cormorant italic preload (a hero/dekor dőlt betűk FLIP-mentesebb betöltése)
+5. Fejléc-telefon chip (+36 20 383 0016, tel: link) — csak >=1360px-en; 1180 alatt amúgy is hamburgeres a fejléc
+6. Scrollspy: aria-current="true" a navigáció aktív linkjén (screen reader jelzés)
+7. Asset verzió: style.css?v=11, main.js?v=12 (a JS-szerkesztés után mindig új verziószám kell)
+
+## Ellenőrzés (EXECUTED, lokál ?v=26)
+- Fejléc 1440: logó | 5 link | telefon-chip | Útvonaltervezés — egyensúlyban, nincs ütközés
+- Mobil 390: chip és CTA rejtve, hamburger 46px touch, logó 32px, overflow 0
+- Overflow-mátrix: 320→310, 390→380, 768→758, 1440→1430 (mind ≤ viewport)
+- Mobil menü: 01–05 linkek, nyit/zár OK; lightbox nyit/zár + caption OK; occ 5↔5 szinkron OK
+- aria-current: Különlegességek-nél a nav linken éles
+- Konzol: 0 üzenet; üzleti tények érintetlenek
+
+Állapot: ÁTADHATÓ.

@@ -256,6 +256,20 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 
 .nav-cta { padding: .6em 1.25em; font-size: .88rem; border-radius: 3px; }
 
+/* Fejléc-telefon (csak széles desktop) */
+.header-phone {
+  display: inline-flex; align-items: center; gap: .5em;
+  font-size: .92rem; font-weight: 600; letter-spacing: .03em;
+  color: var(--champagne);
+  padding: .45em .8em;
+  border: 1px solid rgba(243,235,221,.22);
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: border-color .3s, color .3s, background-color .3s;
+}
+.header-phone svg { width: 15px; height: 15px; color: var(--bronze); flex-shrink: 0; }
+.header-phone:hover { border-color: var(--bronze); color: var(--bronze-soft); background: rgba(185,154,104,.08); }
+
 .nav-toggle {
   display: none;
   width: 46px; height: 46px;
@@ -1005,6 +1019,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 /* ============================================================
    BREAKPOINTOK
    ============================================================ */
+@media (max-width: 1360px) {
+  .header-phone { display: none; }
+}
+
 @media (max-width: 1080px) {
   .site-nav { gap: 1.3rem; }
 }
