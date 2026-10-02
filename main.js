@@ -169,13 +169,16 @@
     let idx = 0;
     let lastFocus = null;
 
+    /* Egyetlen nagyítható kép esetén nincs értelme a lapozásnak */
+    if (items.length <= 1) lb.classList.add('single');
+
     const show = (i) => {
       idx = (i + items.length) % items.length;
       const item = items[idx];
       const img = $('img', item);
       lbImg.src = item.dataset.lb || img.src;
       lbImg.alt = img.alt;
-      lbCap.textContent = item.closest('.m-item')?.querySelector('figcaption')?.textContent.trim() || '';
+      lbCap.textContent = img.alt || '';
     };
     const openLb = (i) => {
       lastFocus = document.activeElement;

@@ -622,17 +622,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   font-size: .95rem; color: var(--bronze-text);
   min-width: 1.9em;
 }
-.sl-name { font-size: 1.02rem; font-weight: 500; color: var(--wine-900); }
-.sl-sec { margin-left: auto; text-align: right; font-size: .9rem; color: var(--ink-soft); font-style: italic; }
 .specials-note { color: var(--ink-soft); font-size: .95rem; max-width: 48ch; margin: 0 0 1.8rem; }
 .specials-figure { margin: 0; }
 .specials-figure img {
   width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: 50% 50%;
-}
-.specials-figure figcaption {
-  margin-top: .8rem;
-  font-size: .88rem; color: var(--ink-soft);
-  font-style: italic;
 }
 
 /* ============================================================
@@ -794,6 +787,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 .lb-prev { left: 1.1rem; }
 .lb-next { right: 1.1rem; }
 .lb-prev:hover, .lb-next:hover { transform: translateY(-50%) scale(1.06); }
+.lightbox.single .lb-prev, .lightbox.single .lb-next { display: none; }
 
 /* ============================================================
    KAPCSOLAT
@@ -842,15 +836,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 }
 .footer-logo { height: 54px; width: auto; margin: 0 auto 1.1rem; }
 .footer-tag { font-family: var(--font-display); font-style: italic; color: var(--bronze-soft); margin: 0 0 1rem; }
-.footer-nap, .footer-hours, .footer-copy {
-  color: color-mix(in srgb, var(--champagne) 60%, transparent);
-  font-size: .92rem; margin: .25rem 0;
-}
-.footer-nap a { color: inherit; text-decoration: none; }
-.footer-nap a:hover { color: var(--bronze-soft); }
-.footer-copy { font-size: .82rem; color: color-mix(in srgb, var(--champagne) 62%, transparent); margin-top: 1.1rem; }
+.footer-hours { color: rgba(243,235,221,.6); }
 
-/* ---------- Mobil sticky CTA ---------- */
+/* --- Mobil sticky CTA ---------- */
 .sticky-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
   display: none;
@@ -1014,7 +1002,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
 
 /* --- Print/vizualitás finomhangolás: hero textúra --- */
 .hero::after { opacity: .38; }
-
 /* ============================================================
    BREAKPOINTOK
    ============================================================ */
@@ -1078,11 +1065,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   .monor-scrim {
     background: linear-gradient(180deg, rgba(14,7,9,.95), rgba(12,6,8,.93));
   }
-  .masonry { columns: 2 140px; column-gap: .7rem; }
-  .m-item { margin-bottom: .7rem; }
-  /* A lead-kép mobilon teljes szélességben vezeti a galériát */
-  .m-lead { column-span: all; margin-bottom: 1rem; }
-  .m-lead .m-btn img { aspect-ratio: 16 / 9; }
 
   /* Alkalom: a kép mobilon is jelen van, de nem tolja hosszúra az oldalt */
   .occ-wrap { grid-template-columns: 1fr; }
@@ -1098,10 +1080,12 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 10px); }
   .occ-row.is-active .occ-body p { max-height: 6em; }
   .contact-phone { font-size: clamp(1.7rem, 8.4vw, 2.4rem); }
 
-  .specials-list { gap: .45rem; }
-  .specials-list li { font-size: .88rem; padding: .42em .9em; }
+  .specials-list { margin: 1.2rem 0 1.6rem; }
+  .specials-list li { font-size: .92rem; padding-block: .6em; }
 
   .contact-list > div { grid-template-columns: 86px 1fr; gap: .7rem; }
+  /* A NYITVATARTÁS címke nem fér el mobilon az első oszlopban — saját sorra kerül */
+  .contact-list .hours { grid-template-columns: 1fr; row-gap: .35rem; }
   .contact-cta .btn { flex: 1 1 auto; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.6rem; text-align: center; }
   .footer-col p { font-size: .9rem; }

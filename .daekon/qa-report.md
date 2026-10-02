@@ -276,3 +276,38 @@ Ezzel az oldalon NINCS külön képgyűjtő blokk: minden kép egy-egy szekció 
 - Kapcsolat + footer: vizuálisan egyensúlyban, NAP-adatok érintetlenek
 
 Állapot: ÁTADHATÓ — nincs külön galéria, a képek a történet részei.
+
+
+---
+
+# V10 — TELJES JAVITÁS ÁTNÉZÉS (ügyfélkérés, "TELJES JAVITÁS ÁTNÉZÉS" + screenshot)
+
+## Előzmény tisztázás
+Az elküldött screenshot a V9 ELŐTTI állapotot mutatta (interlude klaszterrel). Élő ellenőrzés (cache-bust, cb=epoch):
+interlude 0 elem, Galéria-menü 0, occ 5 sor — a V9 ÉLES és helyes. A screenshot elavult cache volt.
+
+## A teljes átnézésben talált és javított hibák (9 tétel)
+1. HTML: Kapcsolat eyebrow "06" → "05" (az interlude törlés után elcsúszott számozás)
+2. HTML: duplikált "KAPCSOLAT" HTML-komment → egy példány
+3. HTML: occ 04 "Asztalterítéssel" leírása az 02 sor szövegét ismételte + belső jegyzet ("a mi vizuálunkkal") → új copy: "Ami az asztalon is jól mutat — vendégváró választás."
+4. HTML: definiálatlan .hd-line-b dekor-elem a heróból → törölve (nem volt CSS szabálya)
+5. CSS: halott masonry-szabályok (.masonry/.m-item/.m-lead, a törölt galériához) → törölve
+6. CSS: mobilon chip-stílusú specials-list override (padding .42em .9em, gap) visszaállt listává
+7. CSS: halott szelektorok (.sl-name, .sl-sec, .specials-figure figcaption, .footer-nap, .footer-copy) + duplikált .hero::after opacity → takarítás
+8. JS: lightbox caption mindig üres volt (.m-item figcaption-keresés masonry-kori kód) → most az img alt-ból töltődik
+9. JS/CSS: lightbox "single" mód — egyetlen képnél (aktuális állapot) a prev/next nyilak elrejtve
+
+Plusz: mobilon a NYITVATARTÁS dt-címke vizuálisan beleolvadt a "Péntek" sorba → .hours saját sorra rendezve 560px alatt.
+Plusz: style.css/main.js verziózott URL (?v=10) — a Pages-cache elavult JS-problémájának végleges kivédése.
+
+## Ellenőrzés (EXECUTED, lokál ?v=13/14)
+- occ szinkron JS-teszt: 5 sor ↔ 5 kép, minden sor a specifikáció szerinti képet váltja
+- Lightbox: nyit/zár OK, kép betölt, caption kitöltve, nyilak rejtve (single), ESC/overlay-záró él
+- openNow: péntek 05:51 → "Most zárva" (helyes); péntek-span [600,1080] érvényesítve
+- Mobil menü: 01–05 számozás, nyit/zár/link-re zárás + scroll-lock feloldás OK
+- Overflow: 360→350, 390→380, 430→420, 768→758, 1024→1014, 1440→1430 (mind ≤ viewport)
+- Konzol: 0 üzenet; scrollspy desktopon rendben (Boraink/Különlegességek aktív jelölés)
+- Vizuális átnézés 1440 + 390 + 1024: hero, statement, boraink, különlegességek, alkalom, kóstolók, Monor, kapcsolat, footer — minden szekció átadható állapotban
+- Üzleti tények érintetlenek: cím, telefon, e-mail, FB, Pé 10–18 / Szo 9–14 mindenhol helyesen
+
+Állapot: ÁTADHATÓ.

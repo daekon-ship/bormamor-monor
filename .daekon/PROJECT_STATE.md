@@ -49,6 +49,7 @@ Teljes prémium one-page weboldal a Bormámor Monor Borkereskedés számára, az
 - [x] V6 final visual polish: occ-visual mobilon VISSZA (16/9, max-height, szinkron képváltás) + grid min-width bugfix (valódi 360px overflow megszüntetve), galéria mobil full-width lead, kóstolók editorial split, alacsony viewport hero-léptékelés (1280×800: 0.88×vh), 7 viewport overflow-PASS
 - [x] V7 editorial képszerkezet: masonry-galéria megszűnt → képek szétosztva a ritmusban (kóstoló: post-13 márkakártya; kapcsolat előtt: fb-kollázs + dark-bottles overlap klaszter); caption-dobozok eltűntek; Monor mobil-scrim javítva (0.95); lightbox mindenhova megmaradt
 - [x] V9: interlude képklasszter TELJESEN törölve (ügyfél: "ez a galéria nem kell") — fb-kollázs az alkalom-váltó új "Asztalterítéssel" sorába épült; "Galéria" menüpont kikerült; minden kép szekció-rész, 0 caption, 0 képgyűjtő blokk
+- [x] V10 teljes javítás-átnézés: 9 maradvány-hiba javítva (06→05 számozás, occ04 duplikált copy, halott masonry/szelektor-takarítás, lightbox caption+single mód, hero decor elem, dupla komment, mobil chip-lista, NYITVATARTÁS mobilon saját sor) + style.css/main.js ?v=10 verziózás; 360–1440 overflow tiszta, konzol 0, occ 5↔5 OK (részletek: qa-report V10)
 - [ ] Egyedi domain (ha a megrendelő hoz) — DNS + CNAME + og:url frissítés
 
 ## Auditálás közben javított hibák
